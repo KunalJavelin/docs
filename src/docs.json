@@ -175,6 +175,12 @@
             },
             "tabs": [
               {
+                "tab": "Get started",
+                "pages": [
+                  "oss/python/build-overview"
+                ]
+              },
+              {
                 "tab": "Deep Agents",
                 "pages": [
                   "oss/python/deepagents/overview",
@@ -626,6 +632,12 @@
               "style": "regular"
             },
             "tabs": [
+              {
+                "tab": "Get started",
+                "pages": [
+                  "oss/javascript/build-overview"
+                ]
+              },
               {
                 "tab": "Deep Agents",
                 "pages": [
@@ -1183,6 +1195,12 @@
         "description": "Evaluate and test agent quality at scale",
         "tabs": [
           {
+            "tab": "Get started",
+            "pages": [
+              "langsmith/test-overview"
+            ]
+          },
+          {
             "tab": "Evaluation",
             "pages": [
               "langsmith/evaluation",
@@ -1412,296 +1430,316 @@
         "product": "Deploy",
         "icon": "rocket",
         "description": "Deploy agents to production and manage infrastructure",
-        "pages": [
-          "langsmith/deployment",
-          "langsmith/deployment-quickstart-da",
-          "langsmith/deployment-quickstart",
-          "langsmith/local-dev-testing",
+        "tabs": [
           {
-            "group": "Agent server",
+            "tab": "Get started",
             "pages": [
-              "langsmith/agent-server",
-              {
-                "group": "Assistants",
-                "pages": [
-                  "langsmith/assistants",
-                  "langsmith/configuration-cloud"
-                ]
-              },
-              "langsmith/use-threads",
-              {
-                "group": "Runs",
-                "pages": [
-                  "langsmith/runs",
-                  "langsmith/background-run",
-                  "langsmith/same-thread",
-                  "langsmith/stateless-runs",
-                  "langsmith/cancel-run"
-                ]
-              },
-              "langsmith/cron-jobs",
-              {
-                "group": "Tutorials",
-                "pages": [
-                  "langsmith/agent-server-feedback",
-                  "langsmith/deploy-other-frameworks",
-                  "langsmith/generative-ui-react"
-                ]
-              }
+              "langsmith/deployment",
+              "langsmith/deployment-quickstart-da",
+              "langsmith/deployment-quickstart",
+              "langsmith/local-dev-testing"
             ]
           },
           {
-            "group": "Core capabilities",
-            "pages": [
-              "langsmith/core-capabilities",
-              "langsmith/streaming",
-              "langsmith/add-human-in-the-loop",
-              "langsmith/human-in-the-loop-time-travel",
-              "langsmith/server-mcp",
-              "langsmith/server-a2a",
-              "langsmith/agent-server-distributed-tracing",
-              "langsmith/use-webhooks",
-              {
-                "group": "Double-texting",
-                "pages": [
-                  "langsmith/double-texting",
-                  "langsmith/interrupt-concurrent",
-                  "langsmith/rollback-concurrent",
-                  "langsmith/reject-concurrent",
-                  "langsmith/enqueue-concurrent"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Develop agents",
-            "pages": [
-              "langsmith/application-structure",
-              {
-                "group": "Setup",
-                "pages": [
-                  "langsmith/setup-app-requirements-txt",
-                  "langsmith/setup-pyproject",
-                  "langsmith/setup-javascript",
-                  "langsmith/monorepo-support"
-                ]
-              },
-              {
-                "group": "Deployment components",
-                "pages": [
-                  "langsmith/components",
-                  "langsmith/data-plane",
-                  "langsmith/control-plane"
-                ]
-              },
-              "langsmith/graph-rebuild",
-              "langsmith/use-remote-graph",
-              "langsmith/semantic-search",
-              "langsmith/configure-ttl",
-              "langsmith/configure-checkpointer",
-              "langsmith/agent-server-scale",
-              "langsmith/cicd-pipeline-example"
-            ]
-          },
-          {
-            "group": "Deployment guides",
-            "pages": [
-              "langsmith/deploy-managed-deep-agent",
-              "langsmith/deploy-to-cloud",
-              "langsmith/deploy-standalone-server",
-              "langsmith/deploy-with-control-plane",
-              "langsmith/diagnostics-self-hosted"
-            ]
-          },
-          {
-            "group": "Sandboxes",
-            "pages": [
-              "langsmith/sandboxes",
-              "langsmith/sandbox-snapshots",
-              "langsmith/sandbox-service-urls",
-              "langsmith/sandbox-auth-proxy",
-              "langsmith/sandbox-permissions",
-              "langsmith/sandbox-cli",
-              "langsmith/sandbox-sdk"
-            ]
-          },
-          {
-            "group": "Auth & access control",
-            "pages": [
-              "langsmith/auth",
-              "langsmith/custom-auth",
-              "langsmith/set-up-custom-auth",
-              "langsmith/resource-auth",
-              "langsmith/add-auth-server",
-              "langsmith/openapi-security",
-              "langsmith/agent-auth"
-            ]
-          },
-          {
-            "group": "Server customization",
-            "pages": [
-              "langsmith/caching",
-              "langsmith/custom-store",
-              "langsmith/custom-checkpointer",
-              "langsmith/custom-lifespan",
-              "langsmith/custom-middleware",
-              "langsmith/custom-routes",
-              "langsmith/encryption",
-              "langsmith/configurable-headers",
-              "langsmith/configurable-logs"
-            ]
-          },
-          {
-            "group": "Platform setup",
+            "tab": "Agent deployment",
             "pages": [
               {
-                "group": "Overview",
+                "group": "Agent server",
                 "pages": [
-                  "langsmith/platform-setup"
-                ]
-              },
-              {
-                "group": "Cloud",
-                "pages": [
-                  "langsmith/cloud"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Self-hosted",
-            "pages": [
-              "langsmith/self-hosted",
-              {
-                "group": "Get started by cloud provider",
-                "pages": [
-                  "langsmith/aws-self-hosted",
-                  "langsmith/azure-self-hosted",
-                  "langsmith/gcp-self-hosted"
-                ]
-              },
-              {
-                "group": "Setup guides",
-                "pages": [
-                  "langsmith/self-host-dependency-versions",
-                  "langsmith/kubernetes",
-                  "langsmith/deploy-self-hosted-full-platform",
+                  "langsmith/agent-server",
                   {
-                    "group": "Manage an installation",
+                    "group": "Assistants",
                     "pages": [
-                      "langsmith/self-host-usage",
-                      "langsmith/self-host-upgrades",
-                      "langsmith/self-host-egress",
-                      "langsmith/self-host-organization-charts",
-                      "langsmith/langsmith-managed-clickhouse",
-                      "langsmith/self-host-ingress",
-                      "langsmith/self-host-mirroring-images",
-                      "langsmith/self-host-fips"
+                      "langsmith/assistants",
+                      "langsmith/configuration-cloud"
+                    ]
+                  },
+                  "langsmith/use-threads",
+                  {
+                    "group": "Runs",
+                    "pages": [
+                      "langsmith/runs",
+                      "langsmith/background-run",
+                      "langsmith/same-thread",
+                      "langsmith/stateless-runs",
+                      "langsmith/cancel-run"
+                    ]
+                  },
+                  "langsmith/cron-jobs",
+                  {
+                    "group": "Tutorials",
+                    "pages": [
+                      "langsmith/agent-server-feedback",
+                      "langsmith/deploy-other-frameworks",
+                      "langsmith/generative-ui-react"
                     ]
                   }
                 ]
               },
               {
-                "group": "Configuration",
+                "group": "Core capabilities",
                 "pages": [
-                  "langsmith/llm-auth-proxy-self-hosted",
-                  "langsmith/self-host-scale",
-                  "langsmith/self-host-ttl",
-                  "langsmith/custom-docker",
-                  "langsmith/self-host-playground-environment-settings",
-                  "langsmith/self-host-ui-customization",
-                  "langsmith/troubleshooting"
+                  "langsmith/core-capabilities",
+                  "langsmith/streaming",
+                  "langsmith/add-human-in-the-loop",
+                  "langsmith/human-in-the-loop-time-travel",
+                  "langsmith/server-mcp",
+                  "langsmith/server-a2a",
+                  "langsmith/agent-server-distributed-tracing",
+                  "langsmith/use-webhooks",
+                  {
+                    "group": "Double-texting",
+                    "pages": [
+                      "langsmith/double-texting",
+                      "langsmith/interrupt-concurrent",
+                      "langsmith/rollback-concurrent",
+                      "langsmith/reject-concurrent",
+                      "langsmith/enqueue-concurrent"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "Connect external services",
+                "group": "Develop agents",
                 "pages": [
-                  "langsmith/self-host-blob-storage",
-                  "langsmith/self-host-external-clickhouse",
-                  "langsmith/self-host-external-postgres",
-                  "langsmith/self-host-external-redis"
+                  "langsmith/application-structure",
+                  {
+                    "group": "Setup",
+                    "pages": [
+                      "langsmith/setup-app-requirements-txt",
+                      "langsmith/setup-pyproject",
+                      "langsmith/setup-javascript",
+                      "langsmith/monorepo-support"
+                    ]
+                  },
+                  {
+                    "group": "Deployment components",
+                    "pages": [
+                      "langsmith/components",
+                      "langsmith/data-plane",
+                      "langsmith/control-plane"
+                    ]
+                  },
+                  "langsmith/graph-rebuild",
+                  "langsmith/use-remote-graph",
+                  "langsmith/semantic-search",
+                  "langsmith/configure-ttl",
+                  "langsmith/configure-checkpointer",
+                  "langsmith/agent-server-scale",
+                  "langsmith/cicd-pipeline-example"
                 ]
               },
               {
-                "group": "Platform auth & access control",
+                "group": "Deployment guides",
                 "pages": [
-                  "langsmith/self-host-basic-auth",
-                  "langsmith/self-host-sso",
-                  "langsmith/self-host-user-management",
-                  "langsmith/self-host-custom-tls-certificates",
-                  "langsmith/self-host-using-an-existing-secret"
+                  "langsmith/deploy-managed-deep-agent",
+                  "langsmith/deploy-to-cloud",
+                  "langsmith/deploy-standalone-server",
+                  "langsmith/deploy-with-control-plane",
+                  "langsmith/diagnostics-self-hosted"
                 ]
               },
               {
-                "group": "Self-hosted observability",
+                "group": "Sandboxes",
                 "pages": [
-                  "langsmith/export-backend",
-                  "langsmith/langsmith-collector",
-                  "langsmith/observability-stack",
-                  "langsmith/self-hosted-mission-control"
+                  "langsmith/sandboxes",
+                  "langsmith/sandbox-snapshots",
+                  "langsmith/sandbox-service-urls",
+                  "langsmith/sandbox-auth-proxy",
+                  "langsmith/sandbox-permissions",
+                  "langsmith/sandbox-cli",
+                  "langsmith/sandbox-sdk"
                 ]
               },
               {
-                "group": "Scripts",
+                "group": "Auth & access control",
                 "pages": [
-                  "langsmith/script-delete-a-workspace",
-                  "langsmith/script-delete-an-organization",
-                  "langsmith/script-delete-traces",
-                  "langsmith/script-generate-clickhouse-stats",
-                  "langsmith/script-generate-query-stats",
-                  "langsmith/script-running-pg-support-queries",
-                  "langsmith/script-running-ch-support-queries"
+                  "langsmith/auth",
+                  "langsmith/custom-auth",
+                  "langsmith/set-up-custom-auth",
+                  "langsmith/resource-auth",
+                  "langsmith/add-auth-server",
+                  "langsmith/openapi-security",
+                  "langsmith/agent-auth"
+                ]
+              },
+              {
+                "group": "Server customization",
+                "pages": [
+                  "langsmith/caching",
+                  "langsmith/custom-store",
+                  "langsmith/custom-checkpointer",
+                  "langsmith/custom-lifespan",
+                  "langsmith/custom-middleware",
+                  "langsmith/custom-routes",
+                  "langsmith/encryption",
+                  "langsmith/configurable-headers",
+                  "langsmith/configurable-logs"
                 ]
               }
             ]
           },
           {
-            "group": "Hybrid",
+            "tab": "Platform setup",
             "pages": [
-              "langsmith/hybrid",
-              "langsmith/deploy-hybrid"
-            ]
-          },
-          {
-            "group": "Reference",
-            "pages": [
-              "langsmith/reference",
-              "langsmith/smith-python-sdk",
-              "langsmith/smith-js-ts-sdk",
-              "langsmith/smith-go-sdk",
-              "langsmith/smith-java-sdk",
-              "langsmith/langgraph-python-sdk",
-              "langsmith/langgraph-js-ts-sdk",
-              "langsmith/smith-api-ref",
               {
-                "group": "LangSmith Deployment",
+                "group": "Platform setup",
                 "pages": [
                   {
-                    "openapi": "langsmith/agent-server-api",
-                    "source": "langsmith/agent-server-openapi.json",
-                    "directory": "langsmith/agent-server-api"
+                    "group": "Overview",
+                    "pages": [
+                      "langsmith/platform-setup"
+                    ]
                   },
                   {
-                    "openapi": "langsmith/control-plane-api",
-                    "source": "https://api.host.langchain.com/openapi.json"
-                  },
-                  {
-                    "openapi": "langsmith/managed-deep-agents-api",
-                    "source": "langsmith/managed-deep-agents-openapi.json",
-                    "directory": "langsmith/managed-deep-agents-api"
-                  },
-                  "langsmith/smith-deployments-sdk",
-                  "langsmith/cli",
-                  "langsmith/remote-graph",
-                  "langsmith/env-var"
+                    "group": "Cloud",
+                    "pages": [
+                      "langsmith/cloud"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "Releases",
+                "group": "Self-hosted",
                 "pages": [
-                  "langsmith/agent-server-changelog",
-                  "langsmith/self-hosted-changelog",
-                  "langsmith/release-versions"
+                  "langsmith/self-hosted",
+                  {
+                    "group": "Get started by cloud provider",
+                    "pages": [
+                      "langsmith/aws-self-hosted",
+                      "langsmith/azure-self-hosted",
+                      "langsmith/gcp-self-hosted"
+                    ]
+                  },
+                  {
+                    "group": "Setup guides",
+                    "pages": [
+                      "langsmith/self-host-dependency-versions",
+                      "langsmith/kubernetes",
+                      "langsmith/deploy-self-hosted-full-platform",
+                      {
+                        "group": "Manage an installation",
+                        "pages": [
+                          "langsmith/self-host-usage",
+                          "langsmith/self-host-upgrades",
+                          "langsmith/self-host-egress",
+                          "langsmith/self-host-organization-charts",
+                          "langsmith/langsmith-managed-clickhouse",
+                          "langsmith/self-host-ingress",
+                          "langsmith/self-host-mirroring-images",
+                          "langsmith/self-host-fips"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Configuration",
+                    "pages": [
+                      "langsmith/llm-auth-proxy-self-hosted",
+                      "langsmith/self-host-scale",
+                      "langsmith/self-host-ttl",
+                      "langsmith/custom-docker",
+                      "langsmith/self-host-playground-environment-settings",
+                      "langsmith/self-host-ui-customization",
+                      "langsmith/troubleshooting"
+                    ]
+                  },
+                  {
+                    "group": "Connect external services",
+                    "pages": [
+                      "langsmith/self-host-blob-storage",
+                      "langsmith/self-host-external-clickhouse",
+                      "langsmith/self-host-external-postgres",
+                      "langsmith/self-host-external-redis"
+                    ]
+                  },
+                  {
+                    "group": "Platform auth & access control",
+                    "pages": [
+                      "langsmith/self-host-basic-auth",
+                      "langsmith/self-host-sso",
+                      "langsmith/self-host-user-management",
+                      "langsmith/self-host-custom-tls-certificates",
+                      "langsmith/self-host-using-an-existing-secret"
+                    ]
+                  },
+                  {
+                    "group": "Self-hosted observability",
+                    "pages": [
+                      "langsmith/export-backend",
+                      "langsmith/langsmith-collector",
+                      "langsmith/observability-stack",
+                      "langsmith/self-hosted-mission-control"
+                    ]
+                  },
+                  {
+                    "group": "Scripts",
+                    "pages": [
+                      "langsmith/script-delete-a-workspace",
+                      "langsmith/script-delete-an-organization",
+                      "langsmith/script-delete-traces",
+                      "langsmith/script-generate-clickhouse-stats",
+                      "langsmith/script-generate-query-stats",
+                      "langsmith/script-running-pg-support-queries",
+                      "langsmith/script-running-ch-support-queries"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Hybrid",
+                "pages": [
+                  "langsmith/hybrid",
+                  "langsmith/deploy-hybrid"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Reference",
+            "pages": [
+              {
+                "group": "Reference",
+                "pages": [
+                  "langsmith/reference",
+                  "langsmith/smith-python-sdk",
+                  "langsmith/smith-js-ts-sdk",
+                  "langsmith/smith-go-sdk",
+                  "langsmith/smith-java-sdk",
+                  "langsmith/langgraph-python-sdk",
+                  "langsmith/langgraph-js-ts-sdk",
+                  "langsmith/smith-api-ref",
+                  {
+                    "group": "LangSmith Deployment",
+                    "pages": [
+                      {
+                        "openapi": "langsmith/agent-server-api",
+                        "source": "langsmith/agent-server-openapi.json",
+                        "directory": "langsmith/agent-server-api"
+                      },
+                      {
+                        "openapi": "langsmith/control-plane-api",
+                        "source": "https://api.host.langchain.com/openapi.json"
+                      },
+                      {
+                        "openapi": "langsmith/managed-deep-agents-api",
+                        "source": "langsmith/managed-deep-agents-openapi.json",
+                        "directory": "langsmith/managed-deep-agents-api"
+                      },
+                      "langsmith/smith-deployments-sdk",
+                      "langsmith/cli",
+                      "langsmith/remote-graph",
+                      "langsmith/env-var"
+                    ]
+                  },
+                  {
+                    "group": "Releases",
+                    "pages": [
+                      "langsmith/agent-server-changelog",
+                      "langsmith/self-hosted-changelog",
+                      "langsmith/release-versions"
+                    ]
+                  }
                 ]
               }
             ]
