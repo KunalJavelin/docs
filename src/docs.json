@@ -2044,6 +2044,30 @@
   },
   "redirects": [
     {
+      "source": "/langsmith/administration-overview#data-retention",
+      "destination": "/langsmith/observability#data-retention"
+    },
+    {
+      "source": "/langsmith/administration-overview#data-retention-auto-upgrades",
+      "destination": "/langsmith/observability#data-retention-auto-upgrades"
+    },
+    {
+      "source": "/langsmith/administration-overview#rate-limits",
+      "destination": "/langsmith/observability#rate-limits"
+    },
+    {
+      "source": "/langsmith/administration-overview#usage-limits",
+      "destination": "/langsmith/observability#usage-limits"
+    },
+    {
+      "source": "/langsmith/administration-overview#usage-and-billing",
+      "destination": "/langsmith/observability#usage-and-billing"
+    },
+    {
+      "source": "/langsmith/administration-overview#side-effects-of-extended-data-retention-traces-limit",
+      "destination": "/langsmith/observability#side-effects-of-extended-data-retention-traces-limit"
+    },
+    {
       "source": "/langsmith/prebuilt-evaluators",
       "destination": "/langsmith/evaluators"
     },
