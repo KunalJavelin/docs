@@ -2249,7 +2249,15 @@
     },
     {
       "source": "/langsmith/agent-builder-pricing-faq",
-      "destination": "/langsmith/fleet/pricing-faq"
+      "destination": "https://www.langchain.com/pricing"
+    },
+    {
+      "source": "/langsmith/pricing-faq",
+      "destination": "https://www.langchain.com/pricing"
+    },
+    {
+      "source": "/langsmith/fleet/pricing-faq",
+      "destination": "https://www.langchain.com/pricing"
     },
     {
       "source": "/langsmith/agent-builder-self-hosted",
