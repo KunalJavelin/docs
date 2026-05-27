@@ -2048,6 +2048,10 @@
       "destination": "/langsmith/evaluators"
     },
     {
+      "source": "/langsmith/deploy-hybrid",
+      "destination": "/langsmith/hybrid-legacy"
+    },
+    {
       "source": "/langsmith/sandbox-templates",
       "destination": "/langsmith/sandbox-snapshots"
     },
@@ -2094,6 +2098,14 @@
     {
       "source": "/oss/javascript/langgraph/timeout-and-error-handling",
       "destination": "/oss/javascript/langgraph/fault-tolerance"
+    },
+    {
+      "source": "/oss/python/langgraph/durable-execution",
+      "destination": "/oss/python/langgraph/persistence"
+    },
+    {
+      "source": "/oss/javascript/langgraph/durable-execution",
+      "destination": "/oss/javascript/langgraph/persistence"
     },
     {
       "source": "/docs",
