@@ -2792,10 +2792,6 @@
       "destination": "/oss/integrations/tools/google_gmail"
     },
     {
-      "source": "/oss/javascript/integrations/tools/gmail",
-      "destination": "/oss/javascript/integrations/tools/google_gmail"
-    },
-    {
       "source": "/oss/python/integrations/chat_loaders/gmail",
       "destination": "/oss/python/integrations/chat_loaders/google_gmail"
     },
@@ -2810,6 +2806,58 @@
     {
       "source": "/oss/integrations/vectorstores/scann",
       "destination": "/oss/integrations/vectorstores/google_scann"
+    },
+    {
+      "source": "/oss/javascript/integrations/llms/deep_infra",
+      "destination": "/oss/integrations/chat/openrouter"
+    },
+    {
+      "source": "/oss/integrations/llms/deep_infra",
+      "destination": "/oss/integrations/chat/openrouter"
+    },
+    {
+      "source": "/oss/javascript/integrations/chat/deep_infra",
+      "destination": "/oss/integrations/chat/openrouter"
+    },
+    {
+      "source": "/oss/integrations/chat/deep_infra",
+      "destination": "/oss/integrations/chat/openrouter"
+    },
+    {
+      "source": "/oss/javascript/integrations/retrievers/tavily",
+      "destination": "/oss/integrations/tools/tavily_search"
+    },
+    {
+      "source": "/oss/integrations/retrievers/tavily",
+      "destination": "/oss/integrations/tools/tavily_search"
+    },
+    {
+      "source": "/oss/javascript/integrations/stores/ioredis_storage",
+      "destination": "/oss/integrations/stores/index"
+    },
+    {
+      "source": "/oss/integrations/stores/ioredis_storage",
+      "destination": "/oss/integrations/stores/index"
+    },
+    {
+      "source": "/oss/javascript/integrations/stores/upstash_redis_storage",
+      "destination": "/oss/integrations/stores/index"
+    },
+    {
+      "source": "/oss/integrations/stores/upstash_redis_storage",
+      "destination": "/oss/integrations/stores/index"
+    },
+    {
+      "source": "/oss/javascript/integrations/vectorstores/googlevertexai",
+      "destination": "/oss/integrations/vectorstores/google_vertex_ai_vector_search"
+    },
+    {
+      "source": "/oss/integrations/vectorstores/googlevertexai",
+      "destination": "/oss/integrations/vectorstores/google_vertex_ai_vector_search"
+    },
+    {
+      "source": "/oss/python/integrations/vectorstores/googlevertexai",
+      "destination": "/oss/python/integrations/vectorstores/google_vertex_ai_vector_search"
     },
     {
       "source": "/oss/python/integrations/chat/google_vertex_ai_palm",
@@ -2900,16 +2948,8 @@
       "destination": "/oss/javascript/integrations/chat/azure"
     },
     {
-      "source": "/oss/javascript/integrations/chat/together",
-      "destination": "/oss/javascript/integrations/chat/togetherai"
-    },
-    {
       "source": "/oss/javascript/integrations/chat/mistralai",
       "destination": "/oss/javascript/integrations/chat/mistral"
-    },
-    {
-      "source": "/oss/javascript/integrations/chat/ibm_watsonx",
-      "destination": "/oss/javascript/integrations/chat/ibm"
     },
     {
       "source": "/oss/javascript/integrations/chat/huggingface",
@@ -2918,6 +2958,22 @@
     {
       "source": "/oss/javascript/integrations/chat/nvidia_ai_endpoints",
       "destination": "/oss/javascript/integrations/chat"
+    },
+    {
+      "source": "/oss/javascript/integrations/chat/bedrock",
+      "destination": "/oss/javascript/integrations/chat/bedrock_converse"
+    },
+    {
+      "source": "/oss/javascript/integrations/llms/bedrock",
+      "destination": "/oss/javascript/integrations/chat/bedrock_converse"
+    },
+    {
+      "source": "/oss/javascript/integrations/callbacks/:path*",
+      "destination": "/oss/javascript/integrations"
+    },
+    {
+      "source": "/oss/javascript/integrations/callbacks",
+      "destination": "/oss/javascript/integrations"
     },
     {
       "source": "/langsmith/index-datasets-for-dynamic-few-shot-example-selection",
