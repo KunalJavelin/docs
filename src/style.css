@@ -719,3 +719,31 @@ html[data-current-path$="/deepagents/code/overview"] breadcrumb-list,
 html[data-current-path$="/deepagents/code/overview"] .breadcrumb-list {
   display: none !important;
 }
+
+/* Agent development lifecycle SVG (home page) */
+.adl-panel { fill: #E5F4FF; stroke: #006DDD; stroke-width: 1.5; }
+.adl-panel-title { fill: #00355c; font: 600 22px/1 ui-sans-serif, system-ui, sans-serif; text-anchor: middle; }
+.adl-pill { fill: #ffffff; stroke: #b8d8f0; stroke-width: 1; transition: fill .15s ease, stroke .15s ease, stroke-width .15s ease; }
+.adl-pill-text { fill: #0a3553; font: 500 14px/1 ui-sans-serif, system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+.adl-center-title { fill: #0a1929; font: 600 30px/1 ui-sans-serif, system-ui, sans-serif; text-anchor: middle; }
+.adl-govern-title { fill: #006DDD; font: 600 20px/1 ui-sans-serif, system-ui, sans-serif; text-anchor: middle; }
+.adl-arrow { stroke: #6aa3d0; stroke-width: 2; stroke-dasharray: 3 6; fill: none; }
+.adl-arrow-head { fill: #6aa3d0; }
+
+.adl-link { cursor: pointer; }
+.adl-link:hover .adl-pill { fill: #cde7fa; stroke: #006DDD; stroke-width: 1.5; }
+.adl-link:hover .adl-pill-text { fill: #003f7a; }
+.adl-link:focus { outline: none; }
+.adl-link:focus-visible .adl-pill { stroke: #006DDD; stroke-width: 2.5; }
+
+.dark .adl-panel { fill: #102a3f; stroke: #4ba8e8; }
+.dark .adl-panel-title { fill: #b8d8f0; }
+.dark .adl-pill { fill: #0d1b27; stroke: #2c4a66; }
+.dark .adl-pill-text { fill: #cce5fb; }
+.dark .adl-center-title { fill: #e6f4ff; }
+.dark .adl-govern-title { fill: #6cb6ee; }
+.dark .adl-arrow { stroke: #4a7ca0; }
+.dark .adl-arrow-head { fill: #4a7ca0; }
+.dark .adl-link:hover .adl-pill { fill: #1a3a52; stroke: #6cb6ee; stroke-width: 1.5; }
+.dark .adl-link:hover .adl-pill-text { fill: #ffffff; }
+.dark .adl-link:focus-visible .adl-pill { stroke: #6cb6ee; }
