@@ -1440,15 +1440,20 @@
           {
             "tab": "Get started",
             "pages": [
-              "langsmith/deployment",
-              "langsmith/deployment-quickstart-da",
-              "langsmith/deployment-quickstart",
-              "langsmith/local-dev-testing"
+              "langsmith/deployment"
             ]
           },
           {
             "tab": "Agent deployment",
             "pages": [
+              {
+                "group": "Get started",
+                "pages": [
+                  "langsmith/deployment-quickstart-da",
+                  "langsmith/deployment-quickstart",
+                  "langsmith/local-dev-testing"
+                ]
+              },
               {
                 "group": "Agent server",
                 "pages": [
