@@ -1547,18 +1547,6 @@
                 ]
               },
               {
-                "group": "Sandboxes",
-                "pages": [
-                  "langsmith/sandboxes",
-                  "langsmith/sandbox-snapshots",
-                  "langsmith/sandbox-service-urls",
-                  "langsmith/sandbox-auth-proxy",
-                  "langsmith/sandbox-permissions",
-                  "langsmith/sandbox-cli",
-                  "langsmith/sandbox-sdk"
-                ]
-              },
-              {
                 "group": "Auth & access control",
                 "pages": [
                   "langsmith/auth",
@@ -1584,6 +1572,18 @@
                   "langsmith/configurable-logs"
                 ]
               }
+            ]
+          },
+          {
+            "tab": "Sandboxes",
+            "pages": [
+              "langsmith/sandboxes",
+              "langsmith/sandbox-snapshots",
+              "langsmith/sandbox-service-urls",
+              "langsmith/sandbox-auth-proxy",
+              "langsmith/sandbox-permissions",
+              "langsmith/sandbox-cli",
+              "langsmith/sandbox-sdk"
             ]
           },
           {
