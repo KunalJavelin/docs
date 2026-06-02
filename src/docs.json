@@ -2458,19 +2458,23 @@
     },
     {
       "source": "/oss/python/deepagents/deploy",
-      "destination": "/langsmith/deploy-managed-deep-agent"
+      "destination": "/langsmith/managed-deep-agents-overview"
     },
     {
       "source": "/oss/javascript/deepagents/deploy",
-      "destination": "/langsmith/deploy-managed-deep-agent"
+      "destination": "/langsmith/managed-deep-agents-overview"
     },
     {
       "source": "/oss/python/deepagents/deploy/overview",
-      "destination": "/langsmith/deploy-managed-deep-agent"
+      "destination": "/langsmith/managed-deep-agents-overview"
     },
     {
       "source": "/oss/javascript/deepagents/deploy/overview",
-      "destination": "/langsmith/deploy-managed-deep-agent"
+      "destination": "/langsmith/managed-deep-agents-overview"
+    },
+    {
+      "source": "/langsmith/deploy-managed-deep-agent",
+      "destination": "/langsmith/managed-deep-agents-overview"
     },
     {
       "source": "/oss/python/langchain/evals",
