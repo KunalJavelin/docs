@@ -159,7 +159,8 @@
         "product": "Home",
         "icon": "home",
         "pages": [
-          "index"
+          "index",
+          "agent-lifecycle"
         ]
       },
       {
@@ -217,7 +218,8 @@
                       "oss/python/deepagents/interpreters",
                       "oss/python/deepagents/profiles",
                       "oss/python/deepagents/event-streaming",
-                      "oss/python/deepagents/streaming"
+                      "oss/python/deepagents/streaming",
+                      "oss/python/deepagents/rubric"
                     ]
                   },
                   {
@@ -458,7 +460,8 @@
                       "oss/python/integrations/providers/huggingface",
                       "oss/python/integrations/providers/microsoft",
                       "oss/python/integrations/providers/ollama",
-                      "oss/python/integrations/providers/groq"
+                      "oss/python/integrations/providers/groq",
+                      "oss/python/integrations/providers/fireworks"
                     ]
                   },
                   {
@@ -500,6 +503,7 @@
                         "group": "LangChain",
                         "expanded": true,
                         "pages": [
+                          "oss/python/langchain/deep-agent-from-scratch",
                           "oss/python/langchain/knowledge-base",
                           "oss/python/langchain/rag",
                           "oss/python/langchain/sql-agent",
@@ -938,7 +942,7 @@
                         "group": "AWS",
                         "pages": [
                           "oss/javascript/integrations/providers/aws",
-                          "oss/javascript/integrations/chat/bedrock",
+                          "oss/javascript/integrations/chat/bedrock_converse",
                           "oss/javascript/integrations/embeddings/bedrock"
                         ]
                       },
@@ -1134,7 +1138,7 @@
         ]
       },
       {
-        "product": "No-code agents",
+        "product": "Build (no-code)",
         "icon": "wand",
         "description": "Build and deploy agents without code",
         "pages": [
@@ -1153,7 +1157,8 @@
             "pages": [
               "langsmith/fleet/workspace-admin",
               "langsmith/fleet/agent-identity",
-              "langsmith/fleet/manage-agent-settings"
+              "langsmith/fleet/manage-agent-settings",
+              "langsmith/fleet/computer-use"
             ]
           },
           {
@@ -1470,6 +1475,7 @@
                     "group": "Tutorials",
                     "pages": [
                       "langsmith/agent-server-feedback",
+                      "langsmith/deploy-google-adk",
                       "langsmith/deploy-other-frameworks",
                       "langsmith/generative-ui-react"
                     ]
@@ -1636,6 +1642,7 @@
                     "group": "Configuration",
                     "pages": [
                       "langsmith/llm-auth-proxy-self-hosted",
+                      "langsmith/self-host-environment-variables",
                       "langsmith/self-host-scale",
                       "langsmith/self-host-ttl",
                       "langsmith/custom-docker",
@@ -1690,7 +1697,7 @@
                 "group": "Hybrid",
                 "pages": [
                   "langsmith/hybrid",
-                  "langsmith/deploy-hybrid"
+                  "langsmith/hybrid-legacy"
                 ]
               }
             ]
@@ -1713,18 +1720,33 @@
                     "group": "LangSmith Deployment",
                     "pages": [
                       {
-                        "openapi": "langsmith/agent-server-api",
-                        "source": "langsmith/agent-server-openapi.json",
-                        "directory": "langsmith/agent-server-api"
+                        "group": "Agent Server API",
+                        "pages": [
+                          "langsmith/server-api-ref"
+                        ],
+                        "openapi": {
+                          "source": "langsmith/agent-server-openapi.json",
+                          "directory": "langsmith/agent-server-api"
+                        }
                       },
                       {
-                        "openapi": "langsmith/control-plane-api",
-                        "source": "https://api.host.langchain.com/openapi.json"
+                        "group": "Control Plane API",
+                        "pages": [
+                          "langsmith/api-ref-control-plane"
+                        ],
+                        "openapi": {
+                          "source": "https://api.host.langchain.com/openapi.json"
+                        }
                       },
                       {
-                        "openapi": "langsmith/managed-deep-agents-api",
-                        "source": "langsmith/managed-deep-agents-openapi.json",
-                        "directory": "langsmith/managed-deep-agents-api"
+                        "group": "Managed Deep Agents API",
+                        "pages": [
+                          "langsmith/managed-deep-agents-api"
+                        ],
+                        "openapi": {
+                          "source": "langsmith/managed-deep-agents-openapi.json",
+                          "directory": "langsmith/managed-deep-agents-api"
+                        }
                       },
                       "langsmith/smith-deployments-sdk",
                       "langsmith/cli",
@@ -1774,7 +1796,8 @@
                       "langsmith/trace-with-langchain",
                       "langsmith/trace-litellm",
                       "langsmith/trace-with-mistral",
-                      "langsmith/trace-openai"
+                      "langsmith/trace-openai",
+                      "langsmith/trace-with-openai-compatible"
                     ]
                   },
                   {
@@ -1811,7 +1834,8 @@
                       "langsmith/trace-with-opencode",
                       "langsmith/trace-with-instructor",
                       "langsmith/trace-with-n8n",
-                      "langsmith/trace-with-temporal"
+                      "langsmith/trace-with-temporal",
+                      "langsmith/trace-with-vscode-copilot"
                     ]
                   }
                 ]
@@ -1927,105 +1951,117 @@
         ]
       },
       {
-        "product": "Admin & governance",
+        "product": "Manage",
         "icon": "shield-check",
         "description": "Manage access control, platform settings, and compliance",
-        "pages": [
-          "langsmith/home",
-          "langsmith/create-account-api-key",
-          "langsmith/profile-configuration",
-          "langsmith/get-started-integrations",
-          "langsmith/pricing-plans",
-          "langsmith/enterprise",
+        "tabs": [
           {
-            "group": "Account administration",
+            "tab": "Admin",
             "pages": [
-              "langsmith/administration-overview",
+              "langsmith/admin-overview",
+              "langsmith/home",
+              "langsmith/create-account-api-key",
+              "langsmith/profile-configuration",
+              "langsmith/get-started-integrations",
+              "langsmith/pricing-plans",
+              "langsmith/enterprise",
               {
-                "group": "Workspace setup",
+                "group": "Account administration",
                 "pages": [
-                  "langsmith/set-up-hierarchy",
-                  "langsmith/workload-isolation",
-                  "langsmith/set-up-resource-tags",
-                  "langsmith/model-configurations"
+                  "langsmith/administration-overview",
+                  {
+                    "group": "Workspace setup",
+                    "pages": [
+                      "langsmith/set-up-hierarchy",
+                      "langsmith/workload-isolation",
+                      "langsmith/set-up-resource-tags",
+                      "langsmith/model-configurations"
+                    ]
+                  },
+                  {
+                    "group": "Billing & usage",
+                    "pages": [
+                      "langsmith/billing",
+                      "langsmith/view-usage",
+                      "langsmith/granular-usage"
+                    ]
+                  },
+                  "langsmith/manage-organization-by-api"
                 ]
               },
               {
-                "group": "Billing & usage",
+                "group": "Users & access control",
                 "pages": [
-                  "langsmith/billing",
-                  "langsmith/view-usage",
-                  "langsmith/granular-usage"
+                  "langsmith/user-management",
+                  "langsmith/rbac",
+                  "langsmith/abac",
+                  "langsmith/organization-workspace-operations",
+                  "langsmith/authentication-methods",
+                  "langsmith/jit-invite-sso"
                 ]
               },
-              "langsmith/manage-organization-by-api"
-            ]
-          },
-          {
-            "group": "Users & access control",
-            "pages": [
-              "langsmith/user-management",
-              "langsmith/rbac",
-              "langsmith/abac",
-              "langsmith/organization-workspace-operations",
-              "langsmith/authentication-methods",
-              "langsmith/jit-invite-sso"
-            ]
-          },
-          {
-            "group": "LLM Gateway",
-            "tag": "Private beta",
-            "pages": [
-              "langsmith/llm-gateway",
-              "langsmith/llm-gateway-spend-policies",
-              "langsmith/llm-gateway-redaction"
-            ]
-          },
-          {
-            "group": "Context Hub",
-            "pages": [
-              "langsmith/use-the-context-hub",
-              "langsmith/manage-contexts-sdk",
-              "langsmith/context-engineering-concepts"
-            ]
-          },
-          {
-            "group": "Audit & compliance",
-            "pages": [
-              "langsmith/audit-logs",
               {
-                "group": "Data & compliance",
-                "icon": "shield-lock",
+                "group": "Context Hub",
                 "pages": [
-                  "langsmith/shared-responsibility-model",
-                  "langsmith/data-storage-and-privacy",
-                  "langsmith/data-purging-compliance",
-                  "langsmith/scalability-and-resilience"
+                  "langsmith/use-the-context-hub",
+                  "langsmith/manage-contexts-sdk",
+                  "langsmith/context-engineering-concepts"
+                ]
+              },
+              {
+                "group": "Tools",
+                "pages": [
+                  "langsmith/polly",
+                  "langsmith/langsmith-cli",
+                  "langsmith/skills"
+                ]
+              },
+              {
+                "group": "Additional resources",
+                "pages": [
+                  {
+                    "group": "FAQ",
+                    "icon": "help-circle",
+                    "pages": [
+                      "langsmith/faq",
+                      "langsmith/regions-faq",
+                      "langsmith/pricing-faq"
+                    ]
+                  },
+                  "langsmith/status"
                 ]
               }
             ]
           },
           {
-            "group": "Tools",
+            "tab": "Govern",
             "pages": [
-              "langsmith/polly",
-              "langsmith/langsmith-cli",
-              "langsmith/skills"
-            ]
-          },
-          {
-            "group": "Additional resources",
-            "pages": [
+              "langsmith/govern-overview",
               {
-                "group": "FAQ",
-                "icon": "help-circle",
+                "group": "LLM Gateway",
+                "tag": "Private beta",
                 "pages": [
-                  "langsmith/faq",
-                  "langsmith/regions-faq",
-                  "langsmith/pricing-faq"
+                  "langsmith/llm-gateway",
+                  "langsmith/llm-gateway-spend-policies",
+                  "langsmith/llm-gateway-redaction"
                 ]
               },
-              "langsmith/status"
+              {
+                "group": "Audit & compliance",
+                "pages": [
+                  "langsmith/audit-logs",
+                  {
+                    "group": "Data & compliance",
+                    "icon": "shield-lock",
+                    "pages": [
+                      "langsmith/shared-responsibility-model",
+                      "langsmith/data-storage-and-privacy",
+                      "langsmith/data-purging-compliance",
+                      "langsmith/scalability-and-resilience"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]
