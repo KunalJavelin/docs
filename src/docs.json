@@ -160,6 +160,7 @@
         "icon": "home",
         "pages": [
           "index",
+          "langsmith/home",
           "agent-lifecycle"
         ]
       },
@@ -1958,8 +1959,7 @@
           {
             "tab": "Admin",
             "pages": [
-              "langsmith/admin-overview",
-              "langsmith/home",
+              "langsmith/admin",
               "langsmith/create-account-api-key",
               "langsmith/profile-configuration",
               "langsmith/get-started-integrations",
@@ -2036,7 +2036,7 @@
           {
             "tab": "Govern",
             "pages": [
-              "langsmith/govern-overview",
+              "langsmith/govern",
               {
                 "group": "LLM Gateway",
                 "tag": "Private beta",
