@@ -95,13 +95,7 @@ clean:
 # Failure: only when filtered output still has indented link lines (real broken links we care about)
 # Run mint, capture output, filter exclusions. Only show output when failing.
 broken-links: build
-	@command -v mint >/dev/null 2>&1 || { echo "Error: mint not installed. Run 'npm install -g mint@4.2.406'"; exit 1; }
-	@mint_version=$$(mint --version 2>/dev/null | tr -d '\n' | xargs); \
-		if [ -n "$$mint_version" ] && [ "$$mint_version" != "4.2.406" ]; then \
-			echo "⚠️  Warning: CI uses mint@4.2.406. You have: $$mint_version"; \
-			echo "   Run 'npm install -g mint@4.2.406' to match CI and avoid local/CI discrepancies."; \
-			echo ""; \
-		fi
+	@command -v mint >/dev/null 2>&1 || { echo "Error: mint not installed. Run 'npm install -g mint@latest'"; exit 1; }
 	@KATEX_MJS="$$(npm root -g 2>/dev/null)/mint/node_modules/katex/dist/katex.mjs"; \
 		if [ -f "$$KATEX_MJS" ] && grep -q '__VERSION__' "$$KATEX_MJS" 2>/dev/null; then \
 			KATEX_DIR="$$(cd "$$(dirname "$$KATEX_MJS")/.." && pwd)"; \
@@ -117,13 +111,7 @@ broken-links: build
 		fi
 
 broken-links-with-anchors: build
-	@command -v mint >/dev/null 2>&1 || { echo "Error: mint not installed. Run 'npm install -g mint@4.2.406'"; exit 1; }
-	@mint_version=$$(mint --version 2>/dev/null | tr -d '\n' | xargs); \
-		if [ -n "$$mint_version" ] && [ "$$mint_version" != "4.2.406" ]; then \
-			echo "⚠️  Warning: CI uses mint@4.2.406. You have: $$mint_version"; \
-			echo "   Run 'npm install -g mint@4.2.406' to match CI and avoid local/CI discrepancies."; \
-			echo ""; \
-		fi
+	@command -v mint >/dev/null 2>&1 || { echo "Error: mint not installed. Run 'npm install -g mint@latest'"; exit 1; }
 	@KATEX_MJS="$$(npm root -g 2>/dev/null)/mint/node_modules/katex/dist/katex.mjs"; \
 		if [ -f "$$KATEX_MJS" ] && grep -q '__VERSION__' "$$KATEX_MJS" 2>/dev/null; then \
 			KATEX_DIR="$$(cd "$$(dirname "$$KATEX_MJS")/.." && pwd)"; \
@@ -140,7 +128,7 @@ broken-links-with-anchors: build
 
 check-openapi: build
 	@echo "Checking openapi spec validity"
-	@command -v mint >/dev/null 2>&1 || { echo "Error: mint is not installed. Run 'npm install -g mint@4.2.406'"; exit 1; }
+	@command -v mint >/dev/null 2>&1 || { echo "Error: mint is not installed. Run 'npm install -g mint@latest'"; exit 1; }
 	@cd build && output=$$(mint openapi-check langsmith/agent-server-openapi.json) && echo "$$output"
 
 # Extract code snippets from src/code-samples (line-based, Bluehawk-compatible tags)

@@ -56,20 +56,14 @@ Build the harness around your goal. `create_deep_agent` gives you a production-r
 ```python
 from deepagents import create_deep_agent
 
-- [Model](#model)
-- [Tools](#tools)
-- [System Prompt](#system-prompt)
-- [Middleware](#middleware), including [prebuilt middleware](#prebuilt-middleware) and [custom middleware](#custom-middleware)
-- [Interpreters](#interpreters)
-- [Subagents](#subagents)
-- [Backends (virtual filesystems)](#backends)
-- [Human-in-the-loop](#human-in-the-loop)
-- [Skills](#skills)
-- [Memory](#memory)
-
-:::python
-- [Profiles](#profiles)
-:::
+agent = create_deep_agent(
+    model="anthropic:claude-sonnet-4-6",
+    system_prompt="You are a helpful assistant.",
+    tools=[search, fetch_url],
+    memory=["./AGENTS.md"],
+    skills=["./skills/"],
+)
+```
 
 | Parameter | What it does |
 |---|---|
