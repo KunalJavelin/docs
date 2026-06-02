@@ -1139,7 +1139,7 @@
         ]
       },
       {
-        "product": "Build (no-code)",
+        "product": "No-code agents",
         "icon": "wand",
         "description": "Build and deploy agents without code",
         "pages": [
@@ -1773,83 +1773,162 @@
         "product": "Monitor",
         "icon": "chart-line",
         "description": "Trace, debug, and monitor agent performance",
-        "pages": [
-          "langsmith/observability",
-          "langsmith/observability-quickstart",
-          "langsmith/observability-concepts",
-          "langsmith/observability-llm-tutorial",
-          "langsmith/engine",
+        "tabs": [
           {
-            "group": "Tracing setup",
+            "tab": "Trace",
             "pages": [
+              "langsmith/observability",
+              "langsmith/observability-quickstart",
+              "langsmith/observability-concepts",
+              "langsmith/observability-llm-tutorial",
               {
-                "group": "Integrations",
-                "icon": "plug",
+                "group": "Tracing setup",
                 "pages": [
-                  "langsmith/integrations",
                   {
-                    "group": "LLM providers",
+                    "group": "Integrations",
+                    "icon": "plug",
                     "pages": [
-                      "langsmith/trace-anthropic",
-                      "langsmith/trace-bedrock",
-                      "langsmith/trace-deepseek",
-                      "langsmith/trace-with-google-gemini",
-                      "langsmith/trace-with-langchain",
-                      "langsmith/trace-litellm",
-                      "langsmith/trace-with-mistral",
-                      "langsmith/trace-openai",
-                      "langsmith/trace-with-openai-compatible"
+                      "langsmith/integrations",
+                      {
+                        "group": "LLM providers",
+                        "pages": [
+                          "langsmith/trace-anthropic",
+                          "langsmith/trace-bedrock",
+                          "langsmith/trace-deepseek",
+                          "langsmith/trace-with-google-gemini",
+                          "langsmith/trace-with-langchain",
+                          "langsmith/trace-litellm",
+                          "langsmith/trace-with-mistral",
+                          "langsmith/trace-openai",
+                          "langsmith/trace-with-openai-compatible"
+                        ]
+                      },
+                      {
+                        "group": "Agent frameworks",
+                        "pages": [
+                          "langsmith/trace-with-autogen",
+                          "langsmith/trace-claude-agent-sdk",
+                          "langsmith/trace-with-crewai",
+                          "langsmith/trace-deep-agents",
+                          "langsmith/trace-with-google-adk",
+                          "langsmith/trace-with-langgraph",
+                          "langsmith/trace-with-mastra",
+                          "langsmith/trace-with-microsoft-agent-framework",
+                          "langsmith/trace-with-openai-agents-sdk",
+                          "langsmith/trace-with-opentelemetry",
+                          "langsmith/trace-with-pydantic-ai",
+                          "langsmith/trace-with-semantic-kernel",
+                          "langsmith/trace-with-strands-agents",
+                          "langsmith/trace-with-vercel-ai-sdk"
+                        ]
+                      },
+                      {
+                        "group": "Voice AI frameworks",
+                        "pages": [
+                          "langsmith/trace-with-livekit",
+                          "langsmith/trace-with-pipecat"
+                        ]
+                      },
+                      {
+                        "group": "Developer tools",
+                        "pages": [
+                          "langsmith/trace-claude-code",
+                          "langsmith/trace-with-codex",
+                          "langsmith/trace-with-opencode",
+                          "langsmith/trace-with-instructor",
+                          "langsmith/trace-with-n8n",
+                          "langsmith/trace-with-temporal",
+                          "langsmith/trace-with-vscode-copilot"
+                        ]
+                      }
                     ]
                   },
                   {
-                    "group": "Agent frameworks",
+                    "group": "Manual instrumentation",
                     "pages": [
-                      "langsmith/trace-with-autogen",
-                      "langsmith/trace-claude-agent-sdk",
-                      "langsmith/trace-with-crewai",
-                      "langsmith/trace-deep-agents",
-                      "langsmith/trace-with-google-adk",
-                      "langsmith/trace-with-langgraph",
-                      "langsmith/trace-with-mastra",
-                      "langsmith/trace-with-microsoft-agent-framework",
-                      "langsmith/trace-with-openai-agents-sdk",
-                      "langsmith/trace-with-opentelemetry",
-                      "langsmith/trace-with-pydantic-ai",
-                      "langsmith/trace-with-semantic-kernel",
-                      "langsmith/trace-with-strands-agents",
-                      "langsmith/trace-with-vercel-ai-sdk"
-                    ]
-                  },
-                  {
-                    "group": "Voice AI frameworks",
-                    "pages": [
-                      "langsmith/trace-with-livekit",
-                      "langsmith/trace-with-pipecat"
-                    ]
-                  },
-                  {
-                    "group": "Developer tools",
-                    "pages": [
-                      "langsmith/trace-claude-code",
-                      "langsmith/trace-with-codex",
-                      "langsmith/trace-with-opencode",
-                      "langsmith/trace-with-instructor",
-                      "langsmith/trace-with-n8n",
-                      "langsmith/trace-with-temporal",
-                      "langsmith/trace-with-vscode-copilot"
+                      "langsmith/annotate-code",
+                      "langsmith/trace-with-api",
+                      "langsmith/log-llm-trace",
+                      "langsmith/log-retriever-trace",
+                      "langsmith/ls-metadata-parameters",
+                      "langsmith/upload-files-with-traces"
                     ]
                   }
                 ]
               },
               {
-                "group": "Manual instrumentation",
+                "group": "Configuration & troubleshooting",
                 "pages": [
-                  "langsmith/annotate-code",
-                  "langsmith/trace-with-api",
-                  "langsmith/log-llm-trace",
-                  "langsmith/log-retriever-trace",
-                  "langsmith/ls-metadata-parameters",
-                  "langsmith/upload-files-with-traces"
+                  {
+                    "group": "Project & environment settings",
+                    "pages": [
+                      "langsmith/log-traces-to-project",
+                      "langsmith/trace-without-env-vars",
+                      "langsmith/conditional-tracing",
+                      "langsmith/sample-traces"
+                    ]
+                  },
+                  "langsmith/cost-tracking",
+                  {
+                    "group": "Advanced tracing techniques",
+                    "pages": [
+                      "langsmith/distributed-tracing",
+                      "langsmith/access-current-span",
+                      "langsmith/serverless-environments",
+                      "langsmith/log-multimodal-traces",
+                      "langsmith/trace-generator-functions"
+                    ]
+                  },
+                  {
+                    "group": "Data & privacy",
+                    "pages": [
+                      "langsmith/add-metadata-tags",
+                      "langsmith/mask-inputs-outputs",
+                      "langsmith/otel-gateway-trace-redaction"
+                    ]
+                  },
+                  {
+                    "group": "Troubleshooting guides",
+                    "pages": [
+                      "langsmith/nest-traces",
+                      "langsmith/troubleshooting-variable-caching"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Debug",
+            "pages": [
+              {
+                "group": "Engine",
+                "pages": [
+                  "langsmith/engine",
+                  "langsmith/engine-webhooks"
+                ]
+              },
+              {
+                "group": "Viewing & managing traces",
+                "pages": [
+                  "langsmith/view-traces",
+                  "langsmith/filter-traces-in-application",
+                  "langsmith/configure-input-output-preview",
+                  "langsmith/manage-trace",
+                  "langsmith/export-traces",
+                  "langsmith/query-threads",
+                  "langsmith/langsmith-remote-mcp",
+                  "langsmith/langsmith-mcp-server",
+                  {
+                    "group": "Bulk export trace data",
+                    "pages": [
+                      "langsmith/data-export",
+                      "langsmith/data-export-destinations",
+                      "langsmith/data-export-monitor",
+                      "langsmith/data-export-downstream",
+                      "langsmith/big-query-bulk-export"
+                    ]
+                  }
                 ]
               },
               "langsmith/threads",
@@ -1859,94 +1938,35 @@
                   "langsmith/messages-view-integrations",
                   "langsmith/messages-view-trace-format"
                 ]
-              }
-            ]
-          },
-          {
-            "group": "Configuration & troubleshooting",
-            "pages": [
-              {
-                "group": "Project & environment settings",
-                "pages": [
-                  "langsmith/log-traces-to-project",
-                  "langsmith/trace-without-env-vars",
-                  "langsmith/conditional-tracing",
-                  "langsmith/sample-traces"
-                ]
-              },
-              "langsmith/cost-tracking",
-              {
-                "group": "Advanced tracing techniques",
-                "pages": [
-                  "langsmith/distributed-tracing",
-                  "langsmith/access-current-span",
-                  "langsmith/serverless-environments",
-                  "langsmith/log-multimodal-traces",
-                  "langsmith/trace-generator-functions"
-                ]
               },
               {
-                "group": "Data & privacy",
+                "group": "Data type reference",
                 "pages": [
-                  "langsmith/add-metadata-tags",
-                  "langsmith/mask-inputs-outputs",
-                  "langsmith/otel-gateway-trace-redaction"
-                ]
-              },
-              {
-                "group": "Troubleshooting guides",
-                "pages": [
-                  "langsmith/nest-traces",
-                  "langsmith/troubleshooting-variable-caching"
+                  "langsmith/run-data-format",
+                  "langsmith/feedback-data-format",
+                  "langsmith/trace-query-syntax"
                 ]
               }
             ]
           },
           {
-            "group": "Viewing & managing traces",
+            "tab": "Observe",
             "pages": [
-              "langsmith/view-traces",
-              "langsmith/filter-traces-in-application",
-              "langsmith/configure-input-output-preview",
-              "langsmith/manage-trace",
-              "langsmith/export-traces",
-              "langsmith/query-threads",
-              "langsmith/langsmith-remote-mcp",
-              "langsmith/langsmith-mcp-server",
               {
-                "group": "Bulk export trace data",
+                "group": "Monitoring & alerting",
                 "pages": [
-                  "langsmith/data-export",
-                  "langsmith/data-export-destinations",
-                  "langsmith/data-export-monitor",
-                  "langsmith/data-export-downstream",
-                  "langsmith/big-query-bulk-export"
+                  "langsmith/dashboards",
+                  "langsmith/alerts",
+                  "langsmith/insights"
+                ]
+              },
+              {
+                "group": "Automations",
+                "pages": [
+                  "langsmith/rules",
+                  "langsmith/webhooks"
                 ]
               }
-            ]
-          },
-          {
-            "group": "Automations",
-            "pages": [
-              "langsmith/rules",
-              "langsmith/webhooks",
-              "langsmith/engine-webhooks"
-            ]
-          },
-          {
-            "group": "Monitoring & alerting",
-            "pages": [
-              "langsmith/dashboards",
-              "langsmith/alerts",
-              "langsmith/insights"
-            ]
-          },
-          {
-            "group": "Data type reference",
-            "pages": [
-              "langsmith/run-data-format",
-              "langsmith/feedback-data-format",
-              "langsmith/trace-query-syntax"
             ]
           }
         ]
