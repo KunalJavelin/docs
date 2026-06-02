@@ -1,0 +1,155 @@
+---
+title:
+sidebarTitle: Home
+mode: "custom"
+---
+
+
+<div class="home-page mx-auto max-w-8xl px-0 lg:px-5" style={{ paddingBottom: "8rem" }}>
+    <div class="mdx-content prose prose-gray dark:prose-invert mx-4 pt-10">
+        <h1 class="flex whitespace-pre-wrap group font-semibold text-2xl sm:text-3xl mt-8">Documentation</h1>
+
+        LangChain is the platform for agent engineering. Build, test, deploy, monitor, and govern reliable agents across every stage of the development lifecycle.
+
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Agent development lifecycle</h2>
+
+        <div class="not-prose my-10">
+            <svg viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="adl-title adl-desc" style={{ width: "100%", height: "auto", maxWidth: "1100px", display: "block", margin: "0 auto" }}>
+                <title id="adl-title">Agent Development Lifecycle</title>
+                <desc id="adl-desc">Build, test, deploy, monitor, and govern stages of the agent development lifecycle. Each label links to the matching documentation section.</desc>
+
+                <defs>
+                    <marker id="adl-arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M0,0 L10,5 L0,10 z" class="adl-arrow-head" />
+                    </marker>
+                </defs>
+
+                <path class="adl-arrow" d="M 510 160 Q 600 40 690 160" marker-end="url(#adl-arrowhead)" />
+                <path class="adl-arrow" d="M 1070 280 Q 1190 360 1070 440" marker-end="url(#adl-arrowhead)" />
+                <path class="adl-arrow" d="M 690 600 Q 600 720 510 600" marker-end="url(#adl-arrowhead)" />
+                <path class="adl-arrow" d="M 130 440 Q 10 360 130 280" marker-end="url(#adl-arrowhead)" />
+
+                <text x="600" y="365" class="adl-center-title">Agent Development Lifecycle</text>
+
+                <g>
+                    <rect x="130" y="80" width="380" height="200" rx="16" class="adl-panel" />
+                    <text x="320" y="118" class="adl-panel-title">Build</text>
+                    <a href="/oss/python/deepagents/overview" class="adl-link">
+                        <rect x="155" y="148" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="235" y="170" class="adl-pill-text">deepagents</text>
+                    </a>
+                    <a href="/oss/python/langchain/overview" class="adl-link">
+                        <rect x="325" y="148" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="405" y="170" class="adl-pill-text">langchain</text>
+                    </a>
+                    <a href="/oss/python/langgraph/overview" class="adl-link">
+                        <rect x="155" y="208" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="235" y="230" class="adl-pill-text">langgraph</text>
+                    </a>
+                    <a href="/langsmith/fleet" class="adl-link">
+                        <rect x="325" y="208" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="405" y="230" class="adl-pill-text">LangSmith Fleet</text>
+                    </a>
+                </g>
+
+                <g>
+                    <rect x="690" y="80" width="380" height="200" rx="16" class="adl-panel" />
+                    <text x="880" y="118" class="adl-panel-title">Test</text>
+                    <a href="/langsmith/manage-datasets" class="adl-link">
+                        <rect x="715" y="148" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="795" y="170" class="adl-pill-text">Datasets</text>
+                    </a>
+                    <a href="/langsmith/evaluation" class="adl-link">
+                        <rect x="885" y="148" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="965" y="170" class="adl-pill-text">Evals</text>
+                    </a>
+                    <a href="/langsmith/analyze-an-experiment" class="adl-link">
+                        <rect x="800" y="208" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="880" y="230" class="adl-pill-text">Experiments</text>
+                    </a>
+                </g>
+
+                <g>
+                    <rect x="130" y="400" width="380" height="200" rx="16" class="adl-panel" />
+                    <text x="320" y="438" class="adl-panel-title">Monitor</text>
+                    <a href="/langsmith/observability" class="adl-link">
+                        <rect x="155" y="468" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="235" y="490" class="adl-pill-text">Tracing</text>
+                    </a>
+                    <a href="/langsmith/dashboards" class="adl-link">
+                        <rect x="325" y="468" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="405" y="490" class="adl-pill-text">Dashboards</text>
+                    </a>
+                    <a href="/langsmith/online-evaluations-llm-as-judge" class="adl-link">
+                        <rect x="155" y="528" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="235" y="550" class="adl-pill-text">Online Evals</text>
+                    </a>
+                    <a href="/langsmith/attach-user-feedback" class="adl-link">
+                        <rect x="325" y="528" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="405" y="550" class="adl-pill-text">User Feedback</text>
+                    </a>
+                </g>
+
+                <g>
+                    <rect x="690" y="400" width="380" height="200" rx="16" class="adl-panel" />
+                    <text x="880" y="438" class="adl-panel-title">Deploy</text>
+                    <a href="/langsmith/agent-server#runtime-architecture" class="adl-link">
+                        <rect x="715" y="468" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="795" y="490" class="adl-pill-text">Runtime</text>
+                    </a>
+                    <a href="/langsmith/agent-server" class="adl-link">
+                        <rect x="885" y="468" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="965" y="490" class="adl-pill-text">Agent Server</text>
+                    </a>
+                    <a href="/langsmith/sandboxes" class="adl-link">
+                        <rect x="715" y="528" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="795" y="550" class="adl-pill-text">Sandboxes</text>
+                    </a>
+                    <a href="/langsmith/use-the-context-hub" class="adl-link">
+                        <rect x="885" y="528" width="160" height="44" rx="8" class="adl-pill" />
+                        <text x="965" y="550" class="adl-pill-text">Context Hub</text>
+                    </a>
+                </g>
+
+                <g>
+                    <text x="600" y="715" class="adl-govern-title">Govern</text>
+                    <a href="/langsmith/llm-gateway" class="adl-link">
+                        <rect x="530" y="730" width="140" height="40" rx="8" class="adl-pill" />
+                        <text x="600" y="750" class="adl-pill-text">LLM Gateway</text>
+                    </a>
+                </g>
+            </svg>
+        </div>
+
+        <Callout icon="shield-lock" color="#4F46E5" iconType="regular">
+        LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. [Meet with our team](https://www.langchain.com/contact-sales) to learn more or visit our [Trust Center](https://trust.langchain.com/).
+        </Callout>
+
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Get started</h2>
+
+        <CardGroup cols={4}>
+            <Card title="Build your first agent with LangChain" icon="settings" href="/oss/python/langchain/quickstart" cta="Get started" />
+            <Card title="Sign up for LangSmith" icon="tools" href="https://smith.langchain.com?utm_source=docs&utm_medium=cta&utm_campaign=langsmith-signup&utm_content=home-card" cta="Try LangSmith" />
+            <Card title="Build an advanced agent with LangGraph" icon="robot" href="/oss/python/langgraph/quickstart" cta="Get started"/>
+            <Card title="Enroll in LangChain Academy" icon="school" href="https://academy.langchain.com/" cta="Get started"/>
+        </CardGroup>
+
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Additional resources</h2>
+
+        <CardGroup cols={4}>
+            <Card title="Community forum" icon="messages" href="https://forum.langchain.com/" cta="Join">
+                Ask questions, share solutions, and discuss best practices.
+            </Card>
+            <Card title="Community Slack" icon="brand-slack" href="https://www.langchain.com/join-community" cta="Join">
+                Connect with other builders and get quick help.
+            </Card>
+            <Card title="Support portal" icon="message-circle-question" href="https://support.langchain.com/" cta="Visit">
+                Submit tickets and track support requests.
+            </Card>
+            <Card title="LangSmith status" icon="tools" href="https://status.smith.langchain.com/" cta="View">
+                Real-time status of LangSmith services and APIs.
+            </Card>
+        </CardGroup>
+
+    </div>
+</div>
