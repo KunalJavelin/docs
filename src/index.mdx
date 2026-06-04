@@ -9,137 +9,83 @@ mode: "custom"
     <div class="mdx-content prose prose-gray dark:prose-invert mx-4 pt-10">
         <h1 class="flex whitespace-pre-wrap group font-semibold text-2xl sm:text-3xl mt-8">Documentation</h1>
 
-        LangChain is the platform for agent engineering. AI teams at Clay, Rippling, Cloudflare, Workday, and more trust LangChain's products to engineer reliable agents.
+        LangChain is the platform for agent engineering. Build, test, deploy, monitor, and govern reliable agents across every stage of the development lifecycle.
 
-        <h2 class="flex whitespace-pre-wrap group font-semibold">LangSmith</h2>
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Agent development lifecycle</h2>
 
-        [**LangSmith**](/langsmith/home) is a platform that helps AI teams use live production data for continuous testing and improvement. LangSmith provides:
+        <div class="not-prose my-10">
+            <div class="adl-engine">
+                <div class="adl-engine-box">
+                    <a class="adl-engine-title" href="/langsmith/engine">LangSmith Engine</a>
+                    <div class="adl-engine-tagline">Your agent for agent engineering</div>
+                </div>
+                <div class="adl-board">
+                <svg class="adl-arrows" viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="adl-arrow" d="M 510 160 Q 600 40 690 160" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 690 160 L 672 151 L 686.4 140.2 Z" fill="#6aa3d0" />
+                    <path class="adl-arrow" d="M 1070 280 Q 1190 360 1070 440" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 1070 440 L 1079.98 422.52 L 1089.98 437.5 Z" fill="#6aa3d0" />
+                    <path class="adl-arrow" d="M 690 600 Q 600 720 510 600" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 510 600 L 528 609 L 513.6 619.8 Z" fill="#6aa3d0" />
+                    <path class="adl-arrow" d="M 130 440 Q 10 360 130 280" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 130 280 L 120.02 297.48 L 110.02 282.5 Z" fill="#6aa3d0" />
+                </svg>
 
-        <CardGroup cols={3}>
-            <Card
-                title="Observability"
-                href="/langsmith/observability"
-                icon="/images/brand/observability-icon-dark.png"
-                cta="Learn more"
-            >
-                See exactly how your agent thinks and acts with detailed tracing and aggregate trend metrics.
-            </Card>
-            <Card
-                title="Engine"
-                href="/langsmith/engine"
-                icon="/images/brand/engine-icon-dark.png"
-                cta="Learn more"
-            >
-                Automatically detect and resolve recurring issues in your tracing projects.
-            </Card>
-            <Card
-                title="Evaluation"
-                href="/langsmith/evaluation"
-                icon="/images/brand/evaluation-icon-dark.png"
-                cta="Learn more"
-            >
-                Test and score agent behavior on production data or offline datasets to continuously improve performance.
-            </Card>
-            <Card
-                title="Prompt Engineering"
-                href="/langsmith/prompt-engineering"
-                icon="/images/brand/prompt-engineering-icon.png"
-                cta="Learn more"
-            >
-                Iterate on prompts with version control, prompt optimization, and collaboration features.
-            </Card>
-            <Card
-                title="Deployment"
-                href="/langsmith/deployment"
-                icon="/images/brand/deployment-icon-dark.png"
-                cta="Learn more"
-            >
-                Ship your agent in one click, using scalable infrastructure built for long-running tasks.
-            </Card>
-            <Card
-                title="LLM Gateway (Private beta)"
-                href="/langsmith/llm-gateway"
-                icon="route"
-                cta="Learn more"
-            >
-                Proxy LLM calls to enforce spend limits, redact sensitive data, and centrally manage provider credentials.
-            </Card>
-        </CardGroup>
+                <div class="adl-hub">
+                    <a class="adl-hub-pill" href="/langsmith/observability">Traces</a>
+                    <div class="adl-hub-pill">SmithDB</div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "10.83%", top: "10.26%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Build</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/oss/python/deepagents/overview">deepagents</a>
+                        <a class="adl-pill" href="/oss/python/langchain/overview">langchain</a>
+                        <a class="adl-pill" href="/oss/python/langgraph/overview">langgraph</a>
+                        <a class="adl-pill" href="/langsmith/fleet">LangSmith Fleet</a>
+                    </div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "57.5%", top: "10.26%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Test</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/langsmith/manage-datasets">Datasets</a>
+                        <a class="adl-pill" href="/langsmith/evaluation">Evals</a>
+                        <a class="adl-pill" href="/langsmith/analyze-an-experiment">Experiments</a>
+                    </div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "10.83%", top: "51.28%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Monitor</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/langsmith/observability">Tracing</a>
+                        <a class="adl-pill" href="/langsmith/dashboards">Dashboards</a>
+                        <a class="adl-pill" href="/langsmith/online-evaluations-llm-as-judge">Online Evals</a>
+                        <a class="adl-pill" href="/langsmith/attach-user-feedback">User Feedback</a>
+                    </div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "57.5%", top: "51.28%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Deploy</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/langsmith/agent-server#runtime-architecture">Runtime</a>
+                        <a class="adl-pill" href="/langsmith/agent-server">Agent Server</a>
+                        <a class="adl-pill" href="/langsmith/sandboxes">Sandboxes</a>
+                        <a class="adl-pill" href="/langsmith/use-the-context-hub">Context Hub</a>
+                    </div>
+                </div>
+
+                <div class="adl-govern">
+                    <div class="adl-govern-title">Govern</div>
+                    <a class="adl-pill" href="/langsmith/llm-gateway">LLM Gateway</a>
+                </div>
+            </div>
+            </div>
+        </div>
 
         <Callout icon="shield-lock" color="#4F46E5" iconType="regular">
         LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. [Meet with our team](https://www.langchain.com/contact-sales) to learn more or visit our [Trust Center](https://trust.langchain.com/).
         </Callout>
-
-        <h2 class="flex whitespace-pre-wrap group font-semibold">LangSmith Fleet</h2>
-        <Card
-                title="Fleet"
-                href="/langsmith/fleet/index"
-                icon="/images/brand/fleet-icon-dark.png"
-                cta="Learn more"
-            >
-                Create helpful AI agents without code. Start from a template, connect your accounts, and let the agent handle routine work while you stay in control.
-            </Card>
-
-        <h2 class="flex whitespace-pre-wrap group font-semibold">Open source agent frameworks</h2>
-
-        <Tabs>
-            <Tab title="Python" icon="brand-python">
-                <CardGroup cols={3}>
-                    <Card
-                        title="Deep Agents (Python)"
-                        href="/oss/python/deepagents/overview"
-                        icon="/images/brand/deep-agents-icon.png"
-                        cta="Learn more"
-                    >
-                        Quickly build agents that can tackle any task.
-                    </Card>
-                    <Card
-                        title="LangChain (Python)"
-                        href="/oss/python/langchain/overview"
-                        icon="/images/brand/langchain-icon.png"
-                        cta="Learn more"
-                    >
-                        Customize the building blocks of your agents.
-                    </Card>
-                    <Card
-                        title="LangGraph (Python)"
-                        href="/oss/python/langgraph/overview"
-                        icon="/images/brand/langgraph-icon.png"
-                        cta="Learn more"
-                    >
-                        Control every step of your custom agent with low-level orchestration, memory, and human-in-the-loop support.
-                    </Card>
-                </CardGroup>
-            </Tab>
-            <Tab title="TypeScript" icon="brand-typescript">
-                <CardGroup cols={3}>
-                    <Card
-                        title="Deep Agents (TypeScript)"
-                        href="/oss/javascript/deepagents/overview"
-                        icon="/images/brand/deep-agents-icon.png"
-                        cta="Learn more"
-                    >
-                        Quickly build agents that can tackle any task.
-                    </Card>
-                    <Card
-                        title="LangChain (TypeScript)"
-                        href="/oss/javascript/langchain/overview"
-                        icon="/images/brand/langchain-icon.png"
-                        cta="Learn more"
-                    >
-                        Customize the building blocks of your agents.
-                    </Card>
-                    <Card
-                        title="LangGraph (TypeScript)"
-                        href="/oss/javascript/langgraph/overview"
-                        icon="/images/brand/langgraph-icon.png"
-                        cta="Learn more"
-                    >
-                        Control every step of your custom agent with low-level orchestration, memory, and human-in-the-loop support.
-                    </Card>
-                </CardGroup>
-            </Tab>
-        </Tabs>
 
         <h2 class="flex whitespace-pre-wrap group font-semibold">Get started</h2>
 
