@@ -1,0 +1,117 @@
+---
+title:
+sidebarTitle: Home
+mode: "custom"
+---
+
+
+<div class="home-page mx-auto max-w-8xl px-0 lg:px-5" style={{ paddingBottom: "8rem" }}>
+    <div class="mdx-content prose prose-gray dark:prose-invert mx-4 pt-10">
+        <h1 class="flex whitespace-pre-wrap group font-semibold text-2xl sm:text-3xl mt-8">Documentation</h1>
+
+        LangChain is the platform for agent engineering. Build, test, deploy, monitor, and govern reliable agents across every stage of the development lifecycle.
+
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Agent development lifecycle</h2>
+
+        <div class="not-prose my-10">
+            <div class="adl-engine">
+                <div class="adl-engine-box">
+                    <a class="adl-engine-title" href="/langsmith/engine">LangSmith Engine</a>
+                    <div class="adl-engine-tagline">Your agent for agent engineering</div>
+                </div>
+                <div class="adl-board">
+                <svg class="adl-arrows" viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="adl-arrow" d="M 510 160 Q 600 40 690 160" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 690 160 L 672 151 L 686.4 140.2 Z" fill="#6aa3d0" />
+                    <path class="adl-arrow" d="M 1070 280 Q 1190 360 1070 440" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 1070 440 L 1079.98 422.52 L 1089.98 437.5 Z" fill="#6aa3d0" />
+                    <path class="adl-arrow" d="M 690 600 Q 600 720 510 600" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 510 600 L 528 609 L 513.6 619.8 Z" fill="#6aa3d0" />
+                    <path class="adl-arrow" d="M 130 440 Q 10 360 130 280" fill="none" stroke="#6aa3d0" strokeWidth="2" strokeDasharray="3 6" />
+                    <path class="adl-arrow-head" d="M 130 280 L 120.02 297.48 L 110.02 282.5 Z" fill="#6aa3d0" />
+                </svg>
+
+                <div class="adl-hub">
+                    <a class="adl-hub-pill" href="/langsmith/observability">Traces</a>
+                    <div class="adl-hub-pill">SmithDB</div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "10.83%", top: "10.26%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Build</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/oss/python/deepagents/overview">deepagents</a>
+                        <a class="adl-pill" href="/oss/python/langchain/overview">langchain</a>
+                        <a class="adl-pill" href="/oss/python/langgraph/overview">langgraph</a>
+                        <a class="adl-pill" href="/langsmith/fleet">LangSmith Fleet</a>
+                    </div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "57.5%", top: "10.26%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Test</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/langsmith/manage-datasets">Datasets</a>
+                        <a class="adl-pill" href="/langsmith/evaluation">Evals</a>
+                        <a class="adl-pill" href="/langsmith/analyze-an-experiment">Experiments</a>
+                    </div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "10.83%", top: "51.28%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Monitor</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/langsmith/observability">Tracing</a>
+                        <a class="adl-pill" href="/langsmith/dashboards">Dashboards</a>
+                        <a class="adl-pill" href="/langsmith/online-evaluations-llm-as-judge">Online Evals</a>
+                        <a class="adl-pill" href="/langsmith/attach-user-feedback">User Feedback</a>
+                    </div>
+                </div>
+
+                <div class="adl-panel" style={{ left: "57.5%", top: "51.28%", width: "31.67%", height: "25.64%" }}>
+                    <div class="adl-panel-title">Deploy</div>
+                    <div class="adl-pills">
+                        <a class="adl-pill" href="/langsmith/agent-server#runtime-architecture">Runtime</a>
+                        <a class="adl-pill" href="/langsmith/agent-server">Agent Server</a>
+                        <a class="adl-pill" href="/langsmith/sandboxes">Sandboxes</a>
+                        <a class="adl-pill" href="/langsmith/use-the-context-hub">Context Hub</a>
+                    </div>
+                </div>
+
+                <div class="adl-govern">
+                    <div class="adl-govern-title">Govern</div>
+                    <a class="adl-pill" href="/langsmith/llm-gateway">LLM Gateway</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <Callout icon="shield-lock" color="#4F46E5" iconType="regular">
+        LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. [Meet with our team](https://www.langchain.com/contact-sales) to learn more or visit our [Trust Center](https://trust.langchain.com/).
+        </Callout>
+
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Get started</h2>
+
+        <CardGroup cols={4}>
+            <Card title="Build your first agent with LangChain" icon="settings" href="/oss/python/langchain/quickstart" cta="Get started" />
+            <Card title="Sign up for LangSmith" icon="tools" href="https://smith.langchain.com?utm_source=docs&utm_medium=cta&utm_campaign=langsmith-signup&utm_content=home-card" cta="Try LangSmith" />
+            <Card title="Build an advanced agent with LangGraph" icon="robot" href="/oss/python/langgraph/quickstart" cta="Get started"/>
+            <Card title="Enroll in LangChain Academy" icon="school" href="https://academy.langchain.com/" cta="Get started"/>
+        </CardGroup>
+
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Additional resources</h2>
+
+        <CardGroup cols={4}>
+            <Card title="Community forum" icon="messages" href="https://forum.langchain.com/" cta="Join">
+                Ask questions, share solutions, and discuss best practices.
+            </Card>
+            <Card title="Community Slack" icon="brand-slack" href="https://www.langchain.com/join-community" cta="Join">
+                Connect with other builders and get quick help.
+            </Card>
+            <Card title="Support portal" icon="message-circle-question" href="https://support.langchain.com/" cta="Visit">
+                Submit tickets and track support requests.
+            </Card>
+            <Card title="LangSmith status" icon="tools" href="https://status.smith.langchain.com/" cta="View">
+                Real-time status of LangSmith services and APIs.
+            </Card>
+        </CardGroup>
+
+    </div>
+</div>
