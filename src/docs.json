@@ -1141,62 +1141,6 @@
         ]
       },
       {
-        "product": "No-code agents",
-        "icon": "wand",
-        "description": "Build and deploy agents without code",
-        "pages": [
-          "langsmith/fleet/index",
-          {
-            "group": "Get started",
-            "pages": [
-              "langsmith/fleet/quickstart",
-              "langsmith/fleet/essentials",
-              "langsmith/fleet/templates",
-              "langsmith/fleet/comparison"
-            ]
-          },
-          {
-            "group": "Configure",
-            "pages": [
-              "langsmith/fleet/workspace-admin",
-              "langsmith/fleet/agent-identity",
-              "langsmith/fleet/manage-agent-settings",
-              "langsmith/fleet/computer-use"
-            ]
-          },
-          {
-            "group": "Tools and automation",
-            "pages": [
-              "langsmith/fleet/tools",
-              "langsmith/fleet/channels",
-              "langsmith/fleet/schedules",
-              "langsmith/fleet/skills",
-              "langsmith/fleet/slack-app",
-              "langsmith/fleet/teams-app",
-              "langsmith/fleet/remote-mcp-servers",
-              "langsmith/fleet/arcade",
-              "langsmith/fleet/salesforce"
-            ]
-          },
-          {
-            "group": "Advanced",
-            "pages": [
-              "langsmith/fleet/code",
-              "langsmith/fleet/mcp-framework",
-              "langsmith/fleet/webhooks",
-              "langsmith/fleet/auth-format"
-            ]
-          },
-          {
-            "group": "Additional resources",
-            "pages": [
-              "langsmith/fleet/access-and-oversight",
-              "langsmith/fleet/self-hosted-link"
-            ]
-          }
-        ]
-      },
-      {
         "product": "Test",
         "icon": "flask",
         "description": "Evaluate and test agent quality at scale",
@@ -1384,7 +1328,7 @@
             ]
           },
           {
-            "tab": "Prompts",
+            "tab": "Prompt engineering",
             "pages": [
               "langsmith/prompt-engineering",
               "langsmith/prompt-engineering-quickstart",
@@ -1794,6 +1738,13 @@
         "description": "Trace, debug, and monitor agent performance",
         "tabs": [
           {
+            "tab": "Engine",
+            "pages": [
+              "langsmith/engine",
+              "langsmith/engine-webhooks"
+            ]
+          },
+          {
             "tab": "Trace",
             "pages": [
               "langsmith/observability",
@@ -1921,13 +1872,6 @@
             "tab": "Debug",
             "pages": [
               {
-                "group": "Engine",
-                "pages": [
-                  "langsmith/engine",
-                  "langsmith/engine-webhooks"
-                ]
-              },
-              {
                 "group": "Viewing & managing traces",
                 "pages": [
                   "langsmith/view-traces",
@@ -1991,9 +1935,9 @@
         ]
       },
       {
-        "product": "Manage",
+        "product": "Govern & admin",
         "icon": "shield-check",
-        "description": "Manage access control, platform settings, and compliance",
+        "description": "Govern agent usage and administer platform access",
         "tabs": [
           {
             "tab": "Admin",
@@ -2100,6 +2044,62 @@
                   }
                 ]
               }
+            ]
+          }
+        ]
+      },
+      {
+        "product": "No-code agents",
+        "icon": "wand",
+        "description": "Build and deploy agents without code",
+        "pages": [
+          "langsmith/fleet/index",
+          {
+            "group": "Get started",
+            "pages": [
+              "langsmith/fleet/quickstart",
+              "langsmith/fleet/essentials",
+              "langsmith/fleet/templates",
+              "langsmith/fleet/comparison"
+            ]
+          },
+          {
+            "group": "Configure",
+            "pages": [
+              "langsmith/fleet/workspace-admin",
+              "langsmith/fleet/agent-identity",
+              "langsmith/fleet/manage-agent-settings",
+              "langsmith/fleet/computer-use"
+            ]
+          },
+          {
+            "group": "Tools and automation",
+            "pages": [
+              "langsmith/fleet/tools",
+              "langsmith/fleet/channels",
+              "langsmith/fleet/schedules",
+              "langsmith/fleet/skills",
+              "langsmith/fleet/slack-app",
+              "langsmith/fleet/teams-app",
+              "langsmith/fleet/remote-mcp-servers",
+              "langsmith/fleet/arcade",
+              "langsmith/fleet/salesforce"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "langsmith/fleet/code",
+              "langsmith/fleet/mcp-framework",
+              "langsmith/fleet/webhooks",
+              "langsmith/fleet/auth-format"
+            ]
+          },
+          {
+            "group": "Additional resources",
+            "pages": [
+              "langsmith/fleet/access-and-oversight",
+              "langsmith/fleet/self-hosted-link"
             ]
           }
         ]
