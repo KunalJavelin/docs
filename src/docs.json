@@ -1935,7 +1935,7 @@
         ]
       },
       {
-        "product": "Govern & admin",
+        "product": "Govern",
         "icon": "shield-check",
         "description": "Govern agent usage and administer platform access",
         "tabs": [
@@ -2016,7 +2016,7 @@
             ]
           },
           {
-            "tab": "Govern",
+            "tab": "Policies & compliance",
             "pages": [
               "langsmith/govern",
               {
