@@ -322,6 +322,9 @@
                         {
                           "group": "Voice AI frameworks",
                           "pages": [
+                            "langsmith/trace-voice-fundamentals",
+                            "langsmith/trace-openai-realtime",
+                            "langsmith/trace-gemini-live",
                             "langsmith/trace-with-livekit",
                             "langsmith/trace-with-pipecat"
                           ]
@@ -595,6 +598,7 @@
                       "pages": [
                         "langsmith/evaluate-chatbot-tutorial",
                         "langsmith/evaluate-rag-tutorial",
+                        "langsmith/evaluate-voice-agents",
                         "langsmith/test-react-agent-pytest",
                         "langsmith/evaluate-complex-agent",
                         "langsmith/run-backtests-new-agent"

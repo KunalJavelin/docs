@@ -1,0 +1,109 @@
+---
+title: Evaluate voice agents
+sidebarTitle: Voice agents
+description: Evaluate voice agents in LangSmith, including prebuilt voice evaluators, how to evaluate audio, and when to evaluate audio versus the transcript.
+---
+
+<Info>
+**Draft structure for review.** The prebuilt evaluator list, code samples, and screenshots are placeholders to be filled in.
+</Info>
+
+Voice agents introduce failure modes that text agents never encounter: speech recognition errors, latency that breaks conversational flow, mishandled interruptions, and tone that feels robotic or inappropriate. Evaluating a voice agent means evaluating the entire pipeline, from audio input through to audio output, not just the text in the middle.
+
+This guide covers how to evaluate voice agents in LangSmith: the [prebuilt voice evaluators](#prebuilt-voice-evaluators) available out of the box, [how to run a voice evaluation](#how-to-evaluate-voice), and [when to evaluate audio directly versus the transcript](#audio-vs-transcript).
+
+<Note>
+This guide assumes familiarity with LangSmith [evaluation concepts](/langsmith/evaluation-concepts) and [running an evaluation](/langsmith/evaluate-llm-application). To evaluate with audio files as dataset attachments, see [Evaluate with attachments](/langsmith/evaluate-with-attachments).
+</Note>
+
+## What to measure
+
+A voice agent is a pipeline of components, each of which can fail independently. Decide what to measure at each layer:
+
+| Layer | What to measure |
+| --- | --- |
+| Speech-to-text (STT) | Word error rate, accent and noise robustness, domain vocabulary. |
+| Intent / understanding | Intent classification accuracy, entity extraction, context retention. |
+| Decision & tool use | Correct tool selection, correct arguments, task progress. |
+| Response generation | Factual accuracy, conciseness, contextual appropriateness. |
+| Text-to-speech (TTS) | Naturalness, pronunciation, emotional appropriateness. |
+| Conversation management | Turn-taking, interruption handling, latency, escalation. |
+| End-to-end outcome | Task completion, conversation-level success, user satisfaction. |
+
+## Prebuilt voice evaluators
+
+LangSmith provides prebuilt evaluators for common voice quality dimensions so you can start scoring conversations without writing custom scorers.
+
+The final list of shipped evaluators, their inputs (audio versus transcript), and outputs are to be confirmed. Candidate dimensions include:
+
+- Emotion / tone detection (positive, neutral, negative).
+- Intent recognition and classification.
+- Transcription accuracy (word error rate).
+- Response latency thresholds.
+- Task completion.
+- Conversational appropriateness (LLM-as-judge over the transcript).
+
+For dimensions not covered out of the box, build a [custom LLM-as-judge](/langsmith/llm-as-judge) or [code evaluator](/langsmith/code-evaluator-ui).
+
+## How to evaluate voice
+
+This section will walk through an end-to-end evaluation:
+
+1. Build a dataset of conversations. Cover edge cases: accents, background noise, rapid speech, interruptions, ambiguous requests, and multiple languages. Source examples from production voice traces.
+2. Attach audio to the examples. See [Evaluate with attachments](/langsmith/evaluate-with-attachments).
+3. Define the evaluation target (the voice agent or a single component of it).
+4. Choose evaluators (prebuilt plus custom).
+5. Run the evaluation and analyze results, segmenting by language, accent, or intent.
+
+<Tip>
+The fastest way to build a high-signal voice dataset is to curate it from real production traces. Filter your project for voice traces (`ls_modality="audio"`), then add interesting conversations — successes, failures, and edge cases — to a dataset.
+</Tip>
+
+## Audio vs. transcript
+
+A key decision in voice evaluation is whether to evaluate the **audio directly** or evaluate the **transcript**. Each has tradeoffs.
+
+### When to evaluate the transcript
+
+Evaluate the transcript when the property you care about is captured fully in the text. Transcript evaluations are cheaper, faster, more deterministic, and reuse the text evaluators you already have.
+
+Use transcript evaluation for:
+
+- Intent classification and entity extraction.
+- Factual accuracy and correctness of the response.
+- Tool selection and arguments.
+- Task completion and conversation outcomes.
+- Policy and compliance checks on what was said.
+
+### When to evaluate the audio
+
+Evaluate the audio directly when the property you care about is lost in transcription. Audio evaluations are more expensive and less deterministic, but capture signal that text cannot.
+
+Use audio evaluation for:
+
+- Tone and emotion (frustration, warmth, confusion).
+- Speech naturalness and pronunciation quality (TTS output).
+- Speech recognition quality itself, by comparing audio to transcript to measure STT errors.
+- Interruptions, talking over, and pacing.
+- Background noise and accent robustness.
+
+### Rule of thumb
+
+Start with transcript evaluation for correctness and task-completion metrics, and reserve audio evaluation for the qualities that only exist in sound. Many teams run both: transcript evaluations on every conversation for broad coverage, and audio evaluations on a sample for the dimensions that require listening.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Voice fundamentals" icon="waveform" href="/langsmith/trace-voice-fundamentals">
+    Trace voice agents so they're ready to evaluate.
+  </Card>
+  <Card title="Evaluate with attachments" icon="paperclip" href="/langsmith/evaluate-with-attachments">
+    Use audio files as dataset attachments in evaluations.
+  </Card>
+  <Card title="LLM-as-a-judge" icon="gavel" href="/langsmith/llm-as-judge">
+    Build custom evaluators for subjective voice qualities.
+  </Card>
+  <Card title="Online evaluations" icon="activity" href="/langsmith/online-evaluations-llm-as-judge">
+    Score voice conversations continuously in production.
+  </Card>
+</CardGroup>

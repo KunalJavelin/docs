@@ -1,0 +1,66 @@
+---
+title: Trace Gemini Live applications
+sidebarTitle: Gemini Live
+description: Trace voice agents built on the Gemini Live API in LangSmith.
+---
+
+<Info>
+**Draft structure for review.** Code samples, the final message mapping, and screenshots are placeholders to be filled in.
+</Info>
+
+The [Gemini Live API](https://ai.google.dev/gemini-api/docs/live) enables low-latency, bidirectional voice and video interactions with Gemini models over a persistent connection. This guide shows how to capture those interactions as audio traces in LangSmith.
+
+Before you start, read [Voice tracing fundamentals](/langsmith/trace-voice-fundamentals) to understand the three core conventions this guide applies:
+
+- Attach conversation audio to the root run.
+- Trace each conversation as a single trace, not one trace per turn.
+- Mark the root run with `ls_modality="audio"`.
+
+## How it works
+
+Like other realtime APIs, Gemini Live streams messages over a session connection rather than discrete request/response calls. To trace a conversation, open a single trace when the session starts, then nest each turn (and its tool calls) underneath as the session streams messages.
+
+| Gemini Live message | Trace mapping |
+| --- | --- |
+| Session setup | Start the root run; record session config. |
+| User audio / input transcription | Capture a user turn; attach input audio and transcript. |
+| Model turn / output transcription | Start an assistant turn; attach output audio and transcript. |
+| Tool / function calls | Nest a tool run within the turn. |
+| Usage metadata | Record token counts and latency on the turn. |
+| Interruptions | Capture on the conversation root run. |
+
+## Installation
+
+```bash
+pip install langsmith google-genai
+```
+
+## Quickstart
+
+This section will walk through a complete example:
+
+1. Set up environment variables (`LANGSMITH_API_KEY`, `GOOGLE_API_KEY`).
+2. Open the Gemini Live session.
+3. Start the root run with `metadata={"ls_modality": "audio"}`.
+4. Map session messages to nested runs using the table above.
+5. Attach input and output audio to the root run.
+6. View the trace in LangSmith.
+
+<Note>
+Set `ls_modality="audio"` on the root run and attach the full conversation audio there, per the [voice fundamentals](/langsmith/trace-voice-fundamentals).
+</Note>
+
+## View your trace
+
+_Screenshot of a Gemini Live conversation trace with audio playback to be added._
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Voice fundamentals" icon="waveform" href="/langsmith/trace-voice-fundamentals">
+    Core conventions for tracing voice agents.
+  </Card>
+  <Card title="Evaluate voice agents" icon="checklist" href="/langsmith/evaluate-voice-agents">
+    Evaluate transcripts, audio, and conversation outcomes.
+  </Card>
+</CardGroup>

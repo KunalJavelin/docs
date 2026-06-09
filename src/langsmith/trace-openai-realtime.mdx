@@ -1,0 +1,69 @@
+---
+title: Trace OpenAI Realtime applications
+sidebarTitle: OpenAI Realtime
+description: Trace voice agents built on the OpenAI Realtime API in LangSmith.
+---
+
+<Info>
+**Draft structure for review.** Code samples, the final event mapping, and screenshots are placeholders to be filled in.
+</Info>
+
+The [OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime) powers low-latency speech-to-speech voice agents over a persistent WebSocket connection. This guide shows how to capture those interactions as audio traces in LangSmith.
+
+Before you start, read [Voice tracing fundamentals](/langsmith/trace-voice-fundamentals) to understand the three core conventions this guide applies:
+
+- Attach conversation audio to the root run.
+- Trace each conversation as a single trace, not one trace per turn.
+- Mark the root run with `ls_modality="audio"`.
+
+## How it works
+
+The Realtime API communicates through a stream of WebSocket events rather than discrete request/response calls. A single conversation can emit a large number of events. To trace it, listen for the key events and map them to runs in a single trace.
+
+| Realtime event | Trace mapping |
+| --- | --- |
+| `session.created` / `session.updated` | Start the root run for the conversation; record session config. |
+| `input_audio_buffer.speech_started` / `speech_stopped` | Capture a user turn; attach input audio. |
+| `conversation.item.input_audio_transcription.completed` | Add the user transcript to the turn. |
+| `response.created` | Start an assistant turn (LLM run). |
+| `response.audio_transcript.done` | Add the assistant transcript. |
+| `response.audio.delta` (output audio) | Attach output audio to the assistant turn. |
+| `response.function_call_arguments.done` | Nest a tool run within the turn. |
+| `response.done` | Close the turn; record token usage and latency. |
+| `error` | Record the error on the active run. |
+
+## Installation
+
+```bash
+pip install langsmith openai
+```
+
+## Quickstart
+
+This section will walk through a complete example:
+
+1. Set up environment variables (`LANGSMITH_API_KEY`, `OPENAI_API_KEY`).
+2. Open the Realtime WebSocket connection.
+3. Start the root run with `metadata={"ls_modality": "audio"}`.
+4. Map events to nested runs using the table above.
+5. Attach input and output audio to the root run.
+6. View the trace in LangSmith.
+
+<Note>
+Set `ls_modality="audio"` on the root run and attach the full conversation audio there, per the [voice fundamentals](/langsmith/trace-voice-fundamentals).
+</Note>
+
+## View your trace
+
+_Screenshot of an OpenAI Realtime conversation trace with audio playback to be added._
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Voice fundamentals" icon="waveform" href="/langsmith/trace-voice-fundamentals">
+    Core conventions for tracing voice agents.
+  </Card>
+  <Card title="Evaluate voice agents" icon="checklist" href="/langsmith/evaluate-voice-agents">
+    Evaluate transcripts, audio, and conversation outcomes.
+  </Card>
+</CardGroup>

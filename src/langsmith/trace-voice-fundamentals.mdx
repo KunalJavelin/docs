@@ -1,0 +1,129 @@
+---
+title: Voice tracing fundamentals
+sidebarTitle: Voice fundamentals
+description: Best practices for tracing voice and audio agents in LangSmith, including conversation audio, single-trace conversations, and the audio modality flag.
+---
+
+Voice agents differ from text agents in ways that change how you should trace them. A conversation is continuous, bidirectional, and interruptible: users talk over the agent, change topics mid-sentence, and expect sub-second responses. To debug and evaluate these systems, your traces need to capture the conversation as a single, audio-aware unit rather than a series of disconnected text exchanges.
+
+This page covers the core conventions for tracing voice applications in LangSmith. Follow these patterns regardless of which framework or model provider you use ([OpenAI Realtime](/langsmith/trace-openai-realtime), [Gemini Live](/langsmith/trace-gemini-live), [LiveKit](/langsmith/trace-with-livekit), or [Pipecat](/langsmith/trace-with-pipecat)).
+
+<Note>
+These conventions assume you are exporting traces to LangSmith through one of the supported [tracing setups](/langsmith/observability). For audio rendering and playback in the UI, see [Log multimodal traces](/langsmith/log-multimodal-traces) and [Upload files with traces](/langsmith/upload-files-with-traces).
+</Note>
+
+## Core conventions
+
+There are three conventions that make voice traces useful in LangSmith:
+
+1. [**Attach conversation audio to the root run**](#attach-conversation-audio-to-the-root-run) so you can listen to the full interaction.
+2. [**Trace each conversation as a single trace**](#trace-each-conversation-as-a-single-trace) instead of splitting it into per-turn traces.
+3. [**Mark the trace as audio**](#mark-the-trace-as-audio) with `ls_modality` so it renders and filters as a voice trace.
+
+### Attach conversation audio to the root run
+
+Attach the recorded audio for the full conversation to the root run of the trace. Listening to the actual audio is the fastest way to understand what happened. Transcripts lose information that only audio captures: tone, emotion, talking over each other, long pauses, background noise, and speech recognition errors.
+
+Attach audio as a file using the [attachments API](/langsmith/upload-files-with-traces). Where possible, attach both:
+
+- **Input audio** — what the user said.
+- **Output audio** — what the agent said back.
+
+```python Python
+from langsmith import traceable
+from langsmith.schemas import Attachment
+
+@traceable(name="voice_conversation")
+def run_conversation(session_id: str, input_audio: bytes, output_audio: bytes):
+    # ... run the voice agent ...
+    return {
+        "input_audio": Attachment(mime_type="audio/wav", data=input_audio),
+        "output_audio": Attachment(mime_type="audio/wav", data=output_audio),
+    }
+```
+
+<Tip>
+Audio files can be large. For high-volume production workloads, consider downsampling, using a compressed format (such as MP3 or Opus), or sampling which conversations you record in full. See [redaction and privacy](#redaction-and-privacy) for handling sensitive audio.
+</Tip>
+
+### Trace each conversation as a single trace
+
+A conversation represents a single interaction, so it should be a single trace. Do not break a conversation into one trace per turn.
+
+When you split a conversation into per-turn traces, you lose the information that lives *between* turns:
+
+- **Interruptions** — when the user talks over the agent and the agent stops.
+- **Turn-taking and latency** — gaps between turns, and how long the agent took to respond.
+- **Cross-turn context** — references to earlier parts of the conversation.
+- **Conversation-level outcomes** — whether the user's goal was ultimately resolved.
+
+Instead, model each turn as a child run nested under one root run that represents the whole conversation:
+
+```text
+voice_conversation                ← root run (whole conversation, audio attached, ls_modality="audio")
+├─ turn 1
+│  ├─ speech-to-text
+│  ├─ agent / LLM
+│  └─ text-to-speech
+├─ turn 2
+│  └─ ...
+└─ ...
+```
+
+For background on grouping related runs, see [Nest traces](/langsmith/nest-traces). If you need to group multiple separate sessions for a single user, use [Threads](/langsmith/threads).
+
+### Mark the trace as audio
+
+Set the `ls_modality` metadata field to `"audio"` on the root run. This flags the trace as a voice trace so LangSmith can render it appropriately and so you can [filter](/langsmith/filter-traces-in-application) for voice traces in your project.
+
+```python Python
+from langsmith import traceable
+
+@traceable(
+    name="voice_conversation",
+    metadata={"ls_modality": "audio"},
+)
+def run_conversation(session_id: str):
+    ...
+```
+
+<Note>
+Set `ls_modality` on the **root run** so the entire conversation is identified as a voice interaction. See [Metadata parameters reference](/langsmith/ls-metadata-parameters) for other `ls_` metadata fields.
+</Note>
+
+## Recommended metadata
+
+Beyond `ls_modality`, attach metadata that helps you filter and segment voice traces during debugging and evaluation:
+
+| Field | Description |
+| --- | --- |
+| `ls_modality` | Set to `"audio"` to mark the trace as voice. |
+| `session_id` / `thread_id` | Group related turns or sessions. |
+| STT / TTS provider | The speech-to-text and text-to-speech providers used. |
+| Voice / language | The voice model and detected language. |
+| Latency | Time-to-first-token and end-to-end response latency. |
+
+## Redaction and privacy
+
+Conversation audio frequently contains personally identifiable information (PII). Before recording audio in production:
+
+- Review [Mask inputs and outputs](/langsmith/mask-inputs-outputs) to redact sensitive fields.
+- Consider redacting or omitting input/output audio in regulated environments.
+- Sample which conversations you store in full to reduce data volume and exposure.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Trace OpenAI Realtime" icon="microphone" href="/langsmith/trace-openai-realtime">
+    Trace voice agents built on the OpenAI Realtime API.
+  </Card>
+  <Card title="Trace Gemini Live" icon="microphone" href="/langsmith/trace-gemini-live">
+    Trace voice agents built on the Gemini Live API.
+  </Card>
+  <Card title="Evaluate voice agents" icon="checklist" href="/langsmith/evaluate-voice-agents">
+    Evaluate voice quality, transcripts, and conversation outcomes.
+  </Card>
+  <Card title="Log multimodal traces" icon="photo" href="/langsmith/log-multimodal-traces">
+    Render audio and other media in the LangSmith UI.
+  </Card>
+</CardGroup>
