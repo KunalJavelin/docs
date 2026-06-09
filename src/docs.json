@@ -1541,6 +1541,36 @@
                   "langsmith/configurable-headers",
                   "langsmith/configurable-logs"
                 ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "langsmith/langgraph-python-sdk",
+                  "langsmith/langgraph-js-ts-sdk",
+                  "langsmith/smith-deployments-sdk",
+                  "langsmith/cli",
+                  "langsmith/remote-graph",
+                  "langsmith/env-var",
+                  {
+                    "group": "Agent Server API",
+                    "pages": [
+                      "langsmith/server-api-ref"
+                    ]
+                  },
+                  {
+                    "group": "Control Plane API",
+                    "pages": [
+                      "langsmith/api-ref-control-plane"
+                    ]
+                  },
+                  {
+                    "group": "Managed Deep Agents API",
+                    "pages": [
+                      "langsmith/managed-deep-agents-api-overview"
+                    ]
+                  },
+                  "langsmith/agent-server-changelog"
+                ]
               }
             ]
           },
@@ -1554,70 +1584,6 @@
               "langsmith/sandbox-permissions",
               "langsmith/sandbox-cli",
               "langsmith/sandbox-sdk"
-            ]
-          },
-          {
-            "tab": "Reference",
-            "pages": [
-              {
-                "group": "Reference",
-                "pages": [
-                  "langsmith/reference",
-                  "langsmith/smith-python-sdk",
-                  "langsmith/smith-js-ts-sdk",
-                  "langsmith/smith-go-sdk",
-                  "langsmith/smith-java-sdk",
-                  "langsmith/langgraph-python-sdk",
-                  "langsmith/langgraph-js-ts-sdk",
-                  "langsmith/smith-api-ref",
-                  {
-                    "group": "LangSmith Deployment",
-                    "pages": [
-                      {
-                        "group": "Agent Server API",
-                        "pages": [
-                          "langsmith/server-api-ref"
-                        ],
-                        "openapi": {
-                          "source": "langsmith/agent-server-openapi.json",
-                          "directory": "langsmith/agent-server-api"
-                        }
-                      },
-                      {
-                        "group": "Control Plane API",
-                        "pages": [
-                          "langsmith/api-ref-control-plane"
-                        ],
-                        "openapi": {
-                          "source": "https://api.host.langchain.com/openapi.json"
-                        }
-                      },
-                      {
-                        "group": "Managed Deep Agents API",
-                        "pages": [
-                          "langsmith/managed-deep-agents-api-overview"
-                        ],
-                        "openapi": {
-                          "source": "langsmith/managed-deep-agents-openapi.json",
-                          "directory": "langsmith/managed-deep-agents-api"
-                        }
-                      },
-                      "langsmith/smith-deployments-sdk",
-                      "langsmith/cli",
-                      "langsmith/remote-graph",
-                      "langsmith/env-var"
-                    ]
-                  },
-                  {
-                    "group": "Releases",
-                    "pages": [
-                      "langsmith/agent-server-changelog",
-                      "langsmith/self-hosted-changelog",
-                      "langsmith/release-versions"
-                    ]
-                  }
-                ]
-              }
             ]
           }
         ]
@@ -1755,6 +1721,17 @@
                       "langsmith/troubleshooting-variable-caching"
                     ]
                   }
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "langsmith/reference",
+                  "langsmith/smith-python-sdk",
+                  "langsmith/smith-js-ts-sdk",
+                  "langsmith/smith-go-sdk",
+                  "langsmith/smith-java-sdk",
+                  "langsmith/smith-api-ref"
                 ]
               }
             ]
@@ -2012,6 +1989,13 @@
                 "pages": [
                   "langsmith/hybrid",
                   "langsmith/hybrid-legacy"
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "langsmith/self-hosted-changelog",
+                  "langsmith/release-versions"
                 ]
               }
             ]
