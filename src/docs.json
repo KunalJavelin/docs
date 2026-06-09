@@ -207,6 +207,7 @@
                     "pages": [
                       "oss/python/deepagents/harness",
                       "oss/python/deepagents/models",
+                      "oss/python/deepagents/tools",
                       "oss/python/deepagents/context-engineering",
                       "oss/python/deepagents/backends",
                       "oss/python/deepagents/subagents",
@@ -303,6 +304,7 @@
                         "pages": [
                           "oss/python/langchain/frontend/markdown-messages",
                           "oss/python/langchain/frontend/tool-calling",
+                          "oss/python/langchain/frontend/headless-tools",
                           "oss/python/langchain/frontend/human-in-the-loop",
                           "oss/python/langchain/frontend/branching-chat",
                           "oss/python/langchain/frontend/reasoning-tokens",
@@ -669,6 +671,7 @@
                     "pages": [
                       "oss/javascript/deepagents/harness",
                       "oss/javascript/deepagents/models",
+                      "oss/javascript/deepagents/tools",
                       "oss/javascript/deepagents/context-engineering",
                       "oss/javascript/deepagents/backends",
                       "oss/javascript/deepagents/subagents",
@@ -764,6 +767,7 @@
                         "pages": [
                           "oss/javascript/langchain/frontend/markdown-messages",
                           "oss/javascript/langchain/frontend/tool-calling",
+                          "oss/javascript/langchain/frontend/headless-tools",
                           "oss/javascript/langchain/frontend/human-in-the-loop",
                           "oss/javascript/langchain/frontend/branching-chat",
                           "oss/javascript/langchain/frontend/reasoning-tokens",
@@ -1507,7 +1511,9 @@
                       "langsmith/managed-deep-agents-mcp",
                       "langsmith/managed-deep-agents-deploy",
                       "langsmith/managed-deep-agents-invoke",
-                      "langsmith/managed-deep-agents-cli"
+                      "langsmith/managed-deep-agents-sdk",
+                      "langsmith/managed-deep-agents-cli",
+                      "langsmith/managed-deep-agents-api"
                     ]
                   },
                   "langsmith/deploy-to-cloud",
@@ -1608,6 +1614,7 @@
               "langsmith/observability-quickstart",
               "langsmith/observability-concepts",
               "langsmith/observability-llm-tutorial",
+              "langsmith/chat-observability",
               {
                 "group": "Tracing setup",
                 "pages": [
@@ -1662,6 +1669,7 @@
                           "langsmith/trace-claude-code",
                           "langsmith/trace-with-codex",
                           "langsmith/trace-with-opencode",
+                          "langsmith/trace-with-pi",
                           "langsmith/trace-with-instructor",
                           "langsmith/trace-with-n8n",
                           "langsmith/trace-with-temporal",
@@ -1994,6 +2002,7 @@
               {
                 "group": "Reference",
                 "pages": [
+                  "langsmith/changelog",
                   "langsmith/self-hosted-changelog",
                   "langsmith/release-versions"
                 ]
@@ -2084,7 +2093,8 @@
             "group": "Additional resources",
             "pages": [
               "langsmith/fleet/access-and-oversight",
-              "langsmith/fleet/self-hosted-link"
+              "langsmith/fleet/self-hosted-link",
+              "langsmith/fleet/changelog"
             ]
           }
         ]
