@@ -158,10 +158,217 @@
       {
         "product": "Home",
         "icon": "home",
-        "pages": [
-          "index",
-          "langsmith/home",
-          "agent-lifecycle"
+        "tabs": [
+          {
+            "tab": "Get started",
+            "pages": [
+              "index",
+              "langsmith/home",
+              "agent-lifecycle"
+            ]
+          },
+          {
+            "tab": "Engine",
+            "pages": [
+              "langsmith/engine-overview",
+              "langsmith/engine",
+              "langsmith/engine-webhooks"
+            ]
+          },
+          {
+            "tab": "Account",
+            "pages": [
+              "langsmith/admin",
+              "langsmith/create-account-api-key",
+              "langsmith/profile-configuration",
+              "langsmith/get-started-integrations",
+              "langsmith/pricing-plans",
+              "langsmith/enterprise",
+              {
+                "group": "Organization",
+                "pages": [
+                  "langsmith/administration-overview",
+                  {
+                    "group": "Workspace setup",
+                    "pages": [
+                      "langsmith/set-up-hierarchy",
+                      "langsmith/workload-isolation",
+                      "langsmith/set-up-resource-tags",
+                      "langsmith/model-configurations"
+                    ]
+                  },
+                  {
+                    "group": "Billing & usage",
+                    "pages": [
+                      "langsmith/billing",
+                      "langsmith/view-usage",
+                      "langsmith/granular-usage"
+                    ]
+                  },
+                  "langsmith/manage-organization-by-api"
+                ]
+              },
+              {
+                "group": "Users & access control",
+                "pages": [
+                  "langsmith/user-management",
+                  "langsmith/rbac",
+                  "langsmith/abac",
+                  "langsmith/organization-workspace-operations",
+                  "langsmith/authentication-methods",
+                  "langsmith/jit-invite-sso"
+                ]
+              },
+              {
+                "group": "Tools",
+                "pages": [
+                  "langsmith/chat",
+                  "langsmith/langsmith-cli",
+                  "langsmith/skills"
+                ]
+              },
+              {
+                "group": "Additional resources",
+                "pages": [
+                  {
+                    "group": "FAQ",
+                    "icon": "help-circle",
+                    "pages": [
+                      "langsmith/faq",
+                      "langsmith/regions-faq"
+                    ]
+                  },
+                  "langsmith/status"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Platform setup",
+            "pages": [
+              {
+                "group": "Platform setup",
+                "pages": [
+                  {
+                    "group": "Overview",
+                    "pages": [
+                      "langsmith/platform-setup"
+                    ]
+                  },
+                  {
+                    "group": "Cloud",
+                    "pages": [
+                      "langsmith/cloud"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Self-hosted",
+                "pages": [
+                  "langsmith/self-hosted",
+                  {
+                    "group": "Get started by cloud provider",
+                    "pages": [
+                      "langsmith/aws-self-hosted",
+                      "langsmith/azure-self-hosted",
+                      "langsmith/gcp-self-hosted"
+                    ]
+                  },
+                  {
+                    "group": "Setup guides",
+                    "pages": [
+                      "langsmith/self-host-dependency-versions",
+                      "langsmith/kubernetes",
+                      "langsmith/deploy-self-hosted-full-platform",
+                      {
+                        "group": "Manage an installation",
+                        "pages": [
+                          "langsmith/self-host-usage",
+                          "langsmith/self-host-upgrades",
+                          "langsmith/self-host-disaster-recovery",
+                          "langsmith/self-host-egress",
+                          "langsmith/self-host-organization-charts",
+                          "langsmith/langsmith-managed-clickhouse",
+                          "langsmith/self-host-ingress",
+                          "langsmith/self-host-mirroring-images",
+                          "langsmith/self-host-fips"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Configuration",
+                    "pages": [
+                      "langsmith/llm-auth-proxy-self-hosted",
+                      "langsmith/self-host-environment-variables",
+                      "langsmith/self-host-scale",
+                      "langsmith/self-host-ttl",
+                      "langsmith/custom-docker",
+                      "langsmith/self-host-playground-environment-settings",
+                      "langsmith/self-host-ui-customization",
+                      "langsmith/troubleshooting"
+                    ]
+                  },
+                  {
+                    "group": "Connect external services",
+                    "pages": [
+                      "langsmith/self-host-blob-storage",
+                      "langsmith/self-host-external-clickhouse",
+                      "langsmith/self-host-external-postgres",
+                      "langsmith/self-host-external-redis"
+                    ]
+                  },
+                  {
+                    "group": "Platform auth & access control",
+                    "pages": [
+                      "langsmith/self-host-basic-auth",
+                      "langsmith/self-host-sso",
+                      "langsmith/self-host-user-management",
+                      "langsmith/self-host-custom-tls-certificates",
+                      "langsmith/self-host-using-an-existing-secret"
+                    ]
+                  },
+                  {
+                    "group": "Self-hosted observability",
+                    "pages": [
+                      "langsmith/export-backend",
+                      "langsmith/langsmith-collector",
+                      "langsmith/observability-stack",
+                      "langsmith/self-hosted-mission-control"
+                    ]
+                  },
+                  {
+                    "group": "Scripts",
+                    "pages": [
+                      "langsmith/script-delete-a-workspace",
+                      "langsmith/script-delete-an-organization",
+                      "langsmith/script-delete-traces",
+                      "langsmith/script-generate-clickhouse-stats",
+                      "langsmith/script-generate-query-stats",
+                      "langsmith/script-running-pg-support-queries",
+                      "langsmith/script-running-ch-support-queries"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Hybrid",
+                "pages": [
+                  "langsmith/hybrid",
+                  "langsmith/hybrid-legacy"
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "langsmith/changelog",
+                  "langsmith/self-hosted-changelog",
+                  "langsmith/release-versions"
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -394,7 +601,6 @@
                     "group": "Capabilities",
                     "pages": [
                       "oss/python/langgraph/persistence",
-                      "oss/python/langgraph/durable-execution",
                       "oss/python/langgraph/fault-tolerance",
                       "oss/python/langgraph/event-streaming",
                       "oss/python/langgraph/streaming",
@@ -568,12 +774,7 @@
                       "oss/python/reference/deepagents-python",
                       "oss/python/reference/langchain-python",
                       "oss/python/reference/langgraph-python",
-                      "oss/python/reference/integrations-python"
-                    ]
-                  },
-                  {
-                    "group": "Errors",
-                    "pages": [
+                      "oss/python/reference/integrations-python",
                       "oss/python/common-errors"
                     ]
                   },
@@ -857,7 +1058,6 @@
                     "group": "Capabilities",
                     "pages": [
                       "oss/javascript/langgraph/persistence",
-                      "oss/javascript/langgraph/durable-execution",
                       "oss/javascript/langgraph/event-streaming",
                       "oss/javascript/langgraph/streaming",
                       "oss/javascript/langgraph/interrupts",
@@ -974,8 +1174,7 @@
                       "oss/javascript/integrations/sandboxes/index",
                       "oss/javascript/integrations/stores/index",
                       "oss/javascript/integrations/document_transformers/index",
-                      "oss/javascript/integrations/llm_caching/index",
-                      "oss/javascript/integrations/callbacks/index"
+                      "oss/javascript/integrations/llm_caching/index"
                     ]
                   },
                   {
@@ -1077,12 +1276,7 @@
                       "oss/javascript/reference/deepagents-javascript",
                       "oss/javascript/reference/langchain-javascript",
                       "oss/javascript/reference/langgraph-javascript",
-                      "oss/javascript/reference/integrations-javascript"
-                    ]
-                  },
-                  {
-                    "group": "Errors",
-                    "pages": [
+                      "oss/javascript/reference/integrations-javascript",
                       "oss/javascript/common-errors"
                     ]
                   },
@@ -1372,9 +1566,10 @@
           {
             "tab": "Context Hub",
             "pages": [
+              "langsmith/context-hub",
+              "langsmith/context-engineering-concepts",
               "langsmith/use-the-context-hub",
-              "langsmith/manage-contexts-sdk",
-              "langsmith/context-engineering-concepts"
+              "langsmith/manage-contexts-sdk"
             ]
           },
           {
@@ -1600,14 +1795,6 @@
         "description": "Trace, debug, and monitor agent performance",
         "tabs": [
           {
-            "tab": "Engine",
-            "pages": [
-              "langsmith/engine-overview",
-              "langsmith/engine",
-              "langsmith/engine-webhooks"
-            ]
-          },
-          {
             "tab": "Trace",
             "pages": [
               "langsmith/observability",
@@ -1813,230 +2000,31 @@
       {
         "product": "Govern",
         "icon": "shield-check",
-        "description": "Govern agent usage and administer platform access",
-        "tabs": [
+        "description": "Govern model access, spending, and compliance",
+        "pages": [
+          "langsmith/govern",
           {
-            "tab": "Admin",
+            "group": "LLM Gateway",
+            "tag": "Private beta",
             "pages": [
-              "langsmith/admin",
-              "langsmith/create-account-api-key",
-              "langsmith/profile-configuration",
-              "langsmith/get-started-integrations",
-              "langsmith/pricing-plans",
-              "langsmith/enterprise",
-              {
-                "group": "Account administration",
-                "pages": [
-                  "langsmith/administration-overview",
-                  {
-                    "group": "Workspace setup",
-                    "pages": [
-                      "langsmith/set-up-hierarchy",
-                      "langsmith/workload-isolation",
-                      "langsmith/set-up-resource-tags",
-                      "langsmith/model-configurations"
-                    ]
-                  },
-                  {
-                    "group": "Billing & usage",
-                    "pages": [
-                      "langsmith/billing",
-                      "langsmith/view-usage",
-                      "langsmith/granular-usage"
-                    ]
-                  },
-                  "langsmith/manage-organization-by-api"
-                ]
-              },
-              {
-                "group": "Users & access control",
-                "pages": [
-                  "langsmith/user-management",
-                  "langsmith/rbac",
-                  "langsmith/abac",
-                  "langsmith/organization-workspace-operations",
-                  "langsmith/authentication-methods",
-                  "langsmith/jit-invite-sso"
-                ]
-              },
-              {
-                "group": "Tools",
-                "pages": [
-                  "langsmith/chat",
-                  "langsmith/langsmith-cli",
-                  "langsmith/skills"
-                ]
-              },
-              {
-                "group": "Additional resources",
-                "pages": [
-                  {
-                    "group": "FAQ",
-                    "icon": "help-circle",
-                    "pages": [
-                      "langsmith/faq",
-                      "langsmith/regions-faq"
-                    ]
-                  },
-                  "langsmith/status"
-                ]
-              }
+              "langsmith/llm-gateway",
+              "langsmith/llm-gateway-custom-providers",
+              "langsmith/llm-gateway-spend-policies",
+              "langsmith/llm-gateway-redaction"
             ]
           },
           {
-            "tab": "Platform setup",
+            "group": "Audit & compliance",
             "pages": [
+              "langsmith/audit-logs",
               {
-                "group": "Platform setup",
+                "group": "Data & compliance",
+                "icon": "shield-lock",
                 "pages": [
-                  {
-                    "group": "Overview",
-                    "pages": [
-                      "langsmith/platform-setup"
-                    ]
-                  },
-                  {
-                    "group": "Cloud",
-                    "pages": [
-                      "langsmith/cloud"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Self-hosted",
-                "pages": [
-                  "langsmith/self-hosted",
-                  {
-                    "group": "Get started by cloud provider",
-                    "pages": [
-                      "langsmith/aws-self-hosted",
-                      "langsmith/azure-self-hosted",
-                      "langsmith/gcp-self-hosted"
-                    ]
-                  },
-                  {
-                    "group": "Setup guides",
-                    "pages": [
-                      "langsmith/self-host-dependency-versions",
-                      "langsmith/kubernetes",
-                      "langsmith/deploy-self-hosted-full-platform",
-                      {
-                        "group": "Manage an installation",
-                        "pages": [
-                          "langsmith/self-host-usage",
-                          "langsmith/self-host-upgrades",
-                          "langsmith/self-host-disaster-recovery",
-                          "langsmith/self-host-egress",
-                          "langsmith/self-host-organization-charts",
-                          "langsmith/langsmith-managed-clickhouse",
-                          "langsmith/self-host-ingress",
-                          "langsmith/self-host-mirroring-images",
-                          "langsmith/self-host-fips"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Configuration",
-                    "pages": [
-                      "langsmith/llm-auth-proxy-self-hosted",
-                      "langsmith/self-host-environment-variables",
-                      "langsmith/self-host-scale",
-                      "langsmith/self-host-ttl",
-                      "langsmith/custom-docker",
-                      "langsmith/self-host-playground-environment-settings",
-                      "langsmith/self-host-ui-customization",
-                      "langsmith/troubleshooting"
-                    ]
-                  },
-                  {
-                    "group": "Connect external services",
-                    "pages": [
-                      "langsmith/self-host-blob-storage",
-                      "langsmith/self-host-external-clickhouse",
-                      "langsmith/self-host-external-postgres",
-                      "langsmith/self-host-external-redis"
-                    ]
-                  },
-                  {
-                    "group": "Platform auth & access control",
-                    "pages": [
-                      "langsmith/self-host-basic-auth",
-                      "langsmith/self-host-sso",
-                      "langsmith/self-host-user-management",
-                      "langsmith/self-host-custom-tls-certificates",
-                      "langsmith/self-host-using-an-existing-secret"
-                    ]
-                  },
-                  {
-                    "group": "Self-hosted observability",
-                    "pages": [
-                      "langsmith/export-backend",
-                      "langsmith/langsmith-collector",
-                      "langsmith/observability-stack",
-                      "langsmith/self-hosted-mission-control"
-                    ]
-                  },
-                  {
-                    "group": "Scripts",
-                    "pages": [
-                      "langsmith/script-delete-a-workspace",
-                      "langsmith/script-delete-an-organization",
-                      "langsmith/script-delete-traces",
-                      "langsmith/script-generate-clickhouse-stats",
-                      "langsmith/script-generate-query-stats",
-                      "langsmith/script-running-pg-support-queries",
-                      "langsmith/script-running-ch-support-queries"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Hybrid",
-                "pages": [
-                  "langsmith/hybrid",
-                  "langsmith/hybrid-legacy"
-                ]
-              },
-              {
-                "group": "Reference",
-                "pages": [
-                  "langsmith/changelog",
-                  "langsmith/self-hosted-changelog",
-                  "langsmith/release-versions"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Policies & compliance",
-            "pages": [
-              "langsmith/govern",
-              {
-                "group": "LLM Gateway",
-                "tag": "Private beta",
-                "pages": [
-                  "langsmith/llm-gateway",
-                  "langsmith/llm-gateway-custom-providers",
-                  "langsmith/llm-gateway-spend-policies",
-                  "langsmith/llm-gateway-redaction"
-                ]
-              },
-              {
-                "group": "Audit & compliance",
-                "pages": [
-                  "langsmith/audit-logs",
-                  {
-                    "group": "Data & compliance",
-                    "icon": "shield-lock",
-                    "pages": [
-                      "langsmith/shared-responsibility-model",
-                      "langsmith/data-storage-and-privacy",
-                      "langsmith/data-purging-compliance",
-                      "langsmith/scalability-and-resilience"
-                    ]
-                  }
+                  "langsmith/shared-responsibility-model",
+                  "langsmith/data-storage-and-privacy",
+                  "langsmith/data-purging-compliance",
+                  "langsmith/scalability-and-resilience"
                 ]
               }
             ]
